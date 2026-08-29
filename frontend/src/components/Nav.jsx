@@ -15,11 +15,11 @@ const Nav = () => {
 
               <div className="flex space-x-4 p-3 mt-3">
                    <Link className="inline-flex text-gray-500 text-lg"><FaHome className="me-3 mt-1 text-gray-500" /> <span className="font-bold">Home</span></Link>
-                   <Link className="inline-flex text-gray-500 text-lg"><FaInfoCircle /> About</Link>
-                   <Link><FaServicestack /> Services</Link>
-                   <Link><FaBriefcase /> Blog</Link>
-                   <Link><FaNewspaper /> Portifolio</Link>
-                   <Link><FaEnvelope /> Contact</Link>
+                   <Link className="inline-flex text-gray-500 text-lg"><FaInfoCircle className="me-3 mt-1" /> <span className="font-bold">About</span></Link>
+                   <Link className="inline-flex text-gray-500 text-lg"><FaServicestack className="me-3 mt-1"/><span className="font-bold">Services</span></Link>
+                   <Link className="inline-flex text-gray-500 text-lg"><FaBriefcase className="me-3 mt-1"/> <span className="font-bold">Blog</span></Link>
+                   <Link className="inline-flex text-gray-500 text-lg"><FaNewspaper className="me-3 mt-1"/> <span className="font-bold">Portifolio</span></Link>
+                   <Link className="inline-flex text-gray-500 text-lg"><FaEnvelope className="me-3 mt-1"/> <span className="font-bold">Contact</span></Link>
               </div>
           </div>
      </div>
