@@ -13,12 +13,12 @@ const Nav = () => {
               </div>
 
               <div>
-                   <Link>Home</Link>
-                   <Link>About</Link>
-                   <Link>Services</Link>
-                   <Link>Blog</Link>
-                   <Link>Portifolio</Link>
-                   <Link>Contact</Link>
+                   <Link><FaHome /> Home</Link>
+                   <Link><FaInfoCircle /> About</Link>
+                   <Link><FaServicestack /> Services</Link>
+                   <Link><FaBriefcase /> Blog</Link>
+                   <Link><FaNewspaper /> Portifolio</Link>
+                   <Link><FaEnvelope /> Contact</Link>
               </div>
           </div>
      </div>
