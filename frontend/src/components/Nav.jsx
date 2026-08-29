@@ -6,7 +6,7 @@ import logo from "../assets/logo.jpeg";
 const Nav = () => {
     
   return (
-      <div>
+      <div className="fixed top-0 left-0 right-0 bottom-0">
           <div className="bg-white flex justify-between max-w-7xl mx-auto">
               <div className="p-3 flex">
                   <img src={logo}  alt="Logo" className="w-15 h-15 rounded-full hover:scale-105 transition duration-200"/>
