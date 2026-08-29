@@ -7,9 +7,10 @@ const Nav = () => {
     
   return (
       <div>
-          <div>
-              <div>
+          <div className="bg-white flex">
+              <div >
                   <img src={logo}  alt="Logo" />
+                  <h1>Code Explorer Rwanda</h1>
               </div>
 
               <div>
