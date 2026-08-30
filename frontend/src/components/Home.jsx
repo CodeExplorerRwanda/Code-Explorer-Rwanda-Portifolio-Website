@@ -176,32 +176,120 @@ const Home = () => {
                             <div className="mt-3">
                                       <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
 
-                                  <div className="mt-4 grid grid-cols-2 mb-4">
-                                      <div>
-                                           <div className="flex justify-between">
-                                              <p className="text-lg text-gray-600">Landing Page</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">250, 000 FRW</p>
-                                           </div>
-                                       <div className="border border-dashed border-gray-400"></div>
-                                       
-                                       <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">Business website</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">500, 000 FRW</p>
-                                           </div>
-                                       <div className="border border-dashed border-gray-400"></div>
-                                       
-                                       <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">E-commerce store</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">250, 000 FRW</p>
-                                           </div>
-                                       <div className="border border-dashed border-gray-400"></div>
-                                       
-                                       <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">Web app/ dashboard</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">800, 000 FRW</p>
-                                           </div>
-                                     </div>
-                                  </div>
+                                      <div className="mt-4 grid grid-cols-2 mb-4">
+                                        <div>
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              150,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              250,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              350,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              300,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              500,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              700,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              500,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              900,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              1,500,000+ FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              500,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              800,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              1,500,000+ FRW
+                                            </p>
+                                          </div>
+
+                                        </div>
+                                      </div>
                               </div>
                             </div>
                        </div>
