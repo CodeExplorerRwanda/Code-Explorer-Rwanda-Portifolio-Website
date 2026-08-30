@@ -1,6 +1,6 @@
 // import bg_image from "../assets/bg-image.jpeg";
 
-import { FaArrowRight, FaCode, FaFly, FaGamepad, FaInternetExplorer, FaServer, FaShare } from "react-icons/fa";
+import { FaAddressBook, FaArrowRight, FaBook, FaBrain, FaCamera, FaCode, FaFly, FaGamepad, FaInternetExplorer, FaParagraph, FaServer, FaShare, FaVideo } from "react-icons/fa";
 
 const Home = () => {
 
@@ -155,7 +155,7 @@ const Home = () => {
                                </div>
                            </div>
                            
-                         <div>
+                         <div className="grid grid-cols-2 mb-4 space-x-15 space-y-15">
                             <div className="mt-12 space-y-4 space-x-10">
                               <div>
                                 <div className="flex space-x-6">
@@ -170,27 +170,17 @@ const Home = () => {
                                       </div>
                                   </div>
                                 </div>
-                                  <p className="ms-18 w-1/2 text-gray-700 font-light">Modern websites and web-based tools that help your business look credible and perform smoothly.</p>
+                                  <p className="ms-18  text-gray-700 font-light">Modern websites and web-based tools that help your business look credible and perform smoothly.</p>
                             </div>
                         
                             <div className="mt-3">
                                       <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
 
-                                      <div className="mt-4 grid grid-cols-2 mb-4 space-x-15 space-y-15">
                                        {/* landinng page table */}
-                                        <div>
+                                        <div className="mt-3">
 
                                           <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
+                                            <p className="text-lg text-gray-600">Landing Page</p>
                                             <p className="text-lg text-gray-600 font-bold mb-3">
                                               250,000 FRW
                                             </p>
@@ -199,26 +189,16 @@ const Home = () => {
                                           <div className="border border-dashed border-gray-400"></div>
 
                                           <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
+                                            <p className="text-lg text-gray-600">Business Website</p>
                                             <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
+                                              450,000 FRW
                                             </p>
                                           </div>
 
                                           <div className="border border-dashed border-gray-400"></div>
 
                                           <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
+                                            <p className="text-lg text-gray-600">E-commerce store</p>
                                             <p className="text-lg text-gray-600 font-bold mb-3">
                                               500,000 FRW
                                             </p>
@@ -226,779 +206,407 @@ const Home = () => {
 
                                           <div className="border border-dashed border-gray-400"></div>
 
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
 
                                           <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
+                                            <p className="text-lg text-gray-600">Web app/ dashboard</p>
                                             <p className="text-lg text-gray-600 font-bold mb-3">
                                               800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
                                             </p>
                                           </div>
 
                                           <div className="mt-5">
                                             <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
                                           </div>
-
-
                                         </div>
-                                        {/* Graphic design portal */}
-                                        <div>
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                         
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                        
-                                        {/* photography portal */}
-                                        <div>
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                         
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-
-                                        </div>
-                                        
-                                        {/* video graphy protal */}
-                                        <div>
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                        
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                        
-                                        {/* digital marketing portal */}
-                                        <div>
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                         
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                        
-                                        {/* Coorporate office documentation */}
-                                        <div>
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                        
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                        
-                                        {/* cloud hosting */}
-                                        <div className="w-145">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Landing Page - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              350,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              300,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              700,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              900,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Simple</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Professional</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web App / Dashboard - Advanced</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              1,500,000+ FRW
-                                            </p>
-                                          </div>
-                                      
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaAddressBook className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Graphic design</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Branding & Visuals</p>
                                       </div>
-                              </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">Proffesional logos, branded visuals, and print materials that make your business look polished.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 80, 000 FRW</p>
+
+                                       {/* landinng page table */}
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Logo Design</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              40,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Brand kit</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              100,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Business cards</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              15,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Flayers & brochures</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              10,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Create this graphic design package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaCamera className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Photography</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Product & Business photos</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">Clear image editing, you just give us your image and we transofrm it into high image vue.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 10, 000 FRW</p>
+
+                                       {/* landinng page table */}
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Product photos</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              10,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Corporate portraits</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              20,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Event coverage</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              80,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Photo editing</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              included
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Book this photography package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            {/* videography */}
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaVideo className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Videography</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Reels & Promote video</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">Short promotional videos and storytelling content that help people connect with your brand quickly.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
+
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Social reel</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              30,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Product video</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              100,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Corporate video</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              100,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Editing & delivery</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              included
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Book this videography package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            {/* digital marketing */}
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaShare className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Digital marketing</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Websites & Web Apps</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">SEO, content support, and online visibility services that help more people find your business.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
+
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">SEO setup</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              150,000 FRW/mo
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Website copy</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              70,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Social content plan</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              60,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Adds Support</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              170,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Grow with digital marketing package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            {/* Corporate office */}
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaBook className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Corporate office & documentation</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Admin & professional docs</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">Professional business documents, reports, and formal materials that help your company look organized.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 50, 000 FRW</p>
+
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Business profile</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              50,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Proposal & report design</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              40,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Company documents</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              50,000 FRW
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Document formating</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                              included
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Get this documentation package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            {/* Cloud hosting & domain registry */}
+                            <div className="mt-12 space-y-4 space-x-10">
+                              <div>
+                                <div className="flex space-x-6">
+                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
+                                      <FaCode className="ms-1 text-xl text-sky-500 font-bold" />
+                                  </div>
+
+                                  <div className="flex space-x-3">
+                                     <h1 className="font-bold">Cloud hosting & domain registry</h1>
+                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
+                                        <p className="text-sm">Secure online presence</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <p className="ms-18  text-gray-700 font-light">Reliable domains, hosting, business emails, and backups that keep your website active and protected.</p>
+                            </div>
+                        
+                            <div className="mt-3">
+                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 15, 000 FRW</p>
+
+                                       {/* landinng page table */}
+                                        <div className="mt-3">
+
+                                          <div className="flex justify-between">
+                                            <p className="text-lg text-gray-600">Domain registration</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                               15,000 RWF / year
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Hosting package</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                               40,000 RWF / year
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Business email</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                                25,000 RWF / year
+                                            </p>
+                                          </div>
+
+                                          <div className="border border-dashed border-gray-400"></div>
+
+
+                                          <div className="flex justify-between mt-3">
+                                            <p className="text-lg text-gray-600">Backup support</p>
+                                            <p className="text-lg text-gray-600 font-bold mb-3">
+                                               20,000 RWF / year
+                                            </p>
+                                          </div>
+
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Choose this hosting package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
+                                        </div>
+                                    </div>
                             </div>
                        </div>
                      </div>
