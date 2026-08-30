@@ -176,7 +176,7 @@ const Home = () => {
                             <div className="mt-3">
                                       <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
 
-                                      <div className="mt-4 grid grid-cols-2 mb-4">
+                                      <div className="mt-4 grid grid-cols-2 mb-4 space-x-15 space-y-15">
                                        {/* landinng page table */}
                                         <div>
 
@@ -861,7 +861,7 @@ const Home = () => {
                                         </div>
                                         
                                         {/* cloud hosting */}
-                                        <div>
+                                        <div className="w-145">
 
                                           <div className="flex justify-between">
                                             <p className="text-lg text-gray-600">Landing Page - Simple</p>
