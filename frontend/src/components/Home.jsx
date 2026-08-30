@@ -290,7 +290,7 @@ const Home = () => {
                                           </div>
 
                                           <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full ">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
                                           </div>
 
 
@@ -406,7 +406,10 @@ const Home = () => {
                                               1,500,000+ FRW
                                             </p>
                                           </div>
-
+                                         
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
                                         </div>
                                         
                                         {/* photography portal */}
@@ -519,6 +522,10 @@ const Home = () => {
                                             <p className="text-lg text-gray-600 font-bold mb-3">
                                               1,500,000+ FRW
                                             </p>
+                                          </div>
+                                         
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
                                           </div>
 
                                         </div>
@@ -634,7 +641,10 @@ const Home = () => {
                                               1,500,000+ FRW
                                             </p>
                                           </div>
-
+                                        
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
                                         </div>
                                         
                                         {/* digital marketing portal */}
@@ -748,7 +758,10 @@ const Home = () => {
                                               1,500,000+ FRW
                                             </p>
                                           </div>
-
+                                         
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
                                         </div>
                                         
                                         {/* Coorporate office documentation */}
@@ -862,7 +875,10 @@ const Home = () => {
                                               1,500,000+ FRW
                                             </p>
                                           </div>
-
+                                        
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
                                         </div>
                                         
                                         {/* cloud hosting */}
@@ -976,7 +992,10 @@ const Home = () => {
                                               1,500,000+ FRW
                                             </p>
                                           </div>
-
+                                      
+                                          <div className="mt-5">
+                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
+                                          </div>
                                         </div>
                                       </div>
                               </div>
