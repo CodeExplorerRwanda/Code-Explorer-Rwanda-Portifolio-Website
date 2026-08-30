@@ -185,20 +185,20 @@ const Home = () => {
                                        <div className="border border-dashed border-gray-400"></div>
                                        
                                        <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">Landing Page</p>
+                                              <p className="text-lg text-gray-600">Business website</p>
+                                              <p className="text-lg text-gray-600 font-bold mb-3">500, 000 FRW</p>
+                                           </div>
+                                       <div className="border border-dashed border-gray-400"></div>
+                                       
+                                       <div className="flex justify-between mt-3">
+                                              <p className="text-lg text-gray-600">E-commerce store</p>
                                               <p className="text-lg text-gray-600 font-bold mb-3">250, 000 FRW</p>
                                            </div>
                                        <div className="border border-dashed border-gray-400"></div>
                                        
                                        <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">Landing Page</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">250, 000 FRW</p>
-                                           </div>
-                                       <div className="border border-dashed border-gray-400"></div>
-                                       
-                                       <div className="flex justify-between mt-3">
-                                              <p className="text-lg text-gray-600">Landing Page</p>
-                                              <p className="text-lg text-gray-600 font-bold mb-3">250, 000 FRW</p>
+                                              <p className="text-lg text-gray-600">Web app/ dashboard</p>
+                                              <p className="text-lg text-gray-600 font-bold mb-3">800, 000 FRW</p>
                                            </div>
                                      </div>
                                   </div>
