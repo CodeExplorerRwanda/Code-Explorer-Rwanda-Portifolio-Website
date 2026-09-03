@@ -1,6 +1,6 @@
 // import bg_image from "../assets/bg-image.jpeg";
 
-import { FaAddressBook, FaArrowRight, FaBook, FaBrain, FaCamera, FaCode, FaFly, FaGamepad, FaInternetExplorer, FaParagraph, FaServer, FaShare, FaVideo } from "react-icons/fa";
+import { FaAddressBook, FaArrowDown, FaArrowRight, FaBook, FaBrain, FaCamera, FaCode, FaEnvelope, FaFly, FaGamepad, FaInternetExplorer, FaParagraph, FaQuestion, FaServer, FaShare, FaVideo } from "react-icons/fa";
 
 const Home = () => {
 
@@ -610,6 +610,73 @@ const Home = () => {
                             </div>
                        </div>
                      </div>
+
+                    <div className="mt-7 max-w-5xl mx-auto">
+                         <h1 className="text-center font-bold text-sky-500">FAQ</h1>
+                         <h1 className="text-center font-bold text-4xl">Helpful answers for first-time visitors.</h1>
+                        <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
+                        <div className="mt-7">
+                           <div className="mb-4">
+                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
+                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">What kind of bussiness do you help ?</h1>
+                                    <FaArrowDown className="flex justify-end items-end"/>
+                               </div>
+                               <div className="mt-3 ms-12">
+                                <p className="text-gray-800 text-lg">We support small businesses, startups, schools, shops, and creative professionals, who want a modern and trustworthy online presence.</p>
+                               </div>
+                           </div>
+                           
+                           <div className="mb-4">
+                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
+                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">Can I start with one service only ?</h1>
+                                    <FaArrowDown className="flex justify-end items-end"/>
+                               </div>
+                               <div className="mt-3 ms-12">
+                                <p className="text-gray-800 text-lg">Yes. Many clients begin with a website or logo and later add marketing, hosting or more design support.</p>
+                               </div>
+                           </div>
+                           
+                           <div className="mb-4">
+                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
+                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">Do you help with mobile-friendly websites ?</h1>
+                                    <FaArrowDown className="flex justify-end items-end"/>
+                               </div>
+                               <div className="mt-3 ms-12">
+                                <p className="text-gray-800 text-lg">Absolutely every website we build is designed to look clear and easy to use on mobil, tablet and desktop.</p>
+                               </div>
+                           </div>
+                           
+                           <div className="mb-4">
+                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
+                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">What kind of bussiness do you help ?</h1>
+                                    <FaArrowDown className="flex justify-end items-end"/>
+                               </div>
+                               <div className="mt-3 ms-12">
+                                <p className="text-gray-800 text-lg">We support small businesses, startups, schools, shops, and creative professionals, who want a modern and trustworthy online presence.</p>
+                               </div>
+                           </div>
+                           
+                           <div className="mb-4">
+                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
+                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">How long does a project take ?</h1>
+                                    <FaArrowDown className="flex justify-end items-end"/>
+                               </div>
+                               <div className="mt-3 ms-12">
+                                <p className="text-gray-800 text-lg">Simple projects can be ready in few days, while larger builds may take a couple of weeks, it depend on scope.</p>
+                               </div>
+                           </div>
+
+                        </div>
+                    </div>
+                    <div className="bg-sky-100 mt-12 p-5 rounded-2xl border border-sky-500 mb-9 flex justify-between">
+                       <div>
+                           <h1 className="ms-10 text-3xl text-gray-700 font-bold">Ready to build something clear and professional ?</h1>
+                           <p className="mt-3 text-lg text-gray-800">Let us create a website and digital experience that helps your audience understand your business quickly.</p>
+                       </div>
+                       <div className="mt-7 me-3 ">
+                             <button className="bg-sky-500 py-3 px-5 rounded-full text-white inline-flex hover:bg-sky-600 transition duration-200 hover:translate-y-1"><FaEnvelope className="mt-1 me-3"/> Talk to us</button>
+                       </div>
+                    </div>
                   </div>
                 </div>
             </div>
