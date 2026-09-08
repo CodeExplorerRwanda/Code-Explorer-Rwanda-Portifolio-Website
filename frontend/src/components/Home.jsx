@@ -1,687 +1,413 @@
-// import bg_image from "../assets/bg-image.jpeg";
-
-import { FaAddressBook, FaArrowDown, FaArrowRight, FaBook, FaBrain, FaCamera, FaCode, FaEnvelope, FaFly, FaGamepad, FaInternetExplorer, FaParagraph, FaQuestion, FaServer, FaShare, FaVideo } from "react-icons/fa";
+import { 
+    FaCode, FaPalette, FaShare, FaServer, FaRocket, FaUsers, 
+    FaLightbulb, FaArrowRight, FaEnvelope, FaQuestion, FaArrowDown,
+    FaLaptop, FaMobile, FaTablet, FaCheckCircle, FaStar, FaHeart,
+    FaGem, FaCrown, FaChartLine, FaClock, FaShieldAlt
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Home = () => {
+    const [hoveredCard, setHoveredCard] = useState(null);
+
+    // Animation variants
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+        }
+    };
+
+    const cardHover = {
+        hover: { 
+            scale: 1.05, 
+            boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
+            transition: { duration: 0.3 }
+        }
+    };
+
+    const serviceCards = [
+        { icon: FaCode, title: "Modern Websites", desc: "Clean, responsive websites that work beautifully on every device and screen size.", color: "blue" },
+        { icon: FaPalette, title: "Brand Design", desc: "Distinctive logos, visual identity systems, and marketing materials that make your brand memorable.", color: "amber" },
+        { icon: FaShare, title: "Digital Growth", desc: "SEO optimization, content strategy, and targeted ads to expand your online reach.", color: "emerald" },
+        { icon: FaServer, title: "Cloud Hosting", desc: "Fast, secure hosting with daily backups and 24/7 support for total peace of mind.", color: "purple" }
+    ];
+
+    const processSteps = [
+        { number: "01", title: "Share Your Vision", desc: "We start with a deep conversation about your goals, audience, and what makes your business unique." },
+        { number: "02", title: "Design & Develop", desc: "Our team crafts tailored solutions that align with your brand identity and budget perfectly." },
+        { number: "03", title: "Launch & Grow", desc: "We deliver polished results, provide training, and support your continued growth journey." }
+    ];
+
+    const pricingTiers = [
+        { 
+            tier: "Starter", 
+            price: "250,000", 
+            features: ["Landing Page", "Mobile Responsive", "Basic SEO", "Contact Form"],
+            icon: FaGem,
+            color: "blue"
+        },
+        { 
+            tier: "Professional", 
+            price: "450,000", 
+            features: ["Business Website", "E-commerce Ready", "Advanced SEO", "Blog Integration"],
+            icon: FaCrown,
+            color: "amber"
+        },
+        { 
+            tier: "Enterprise", 
+            price: "800,000", 
+            features: ["Web Application", "Dashboard", "Analytics", "Priority Support"],
+            icon: FaRocket,
+            color: "emerald"
+        }
+    ];
 
     return (
-        <div className=" bg-sky-50">
-            <div>
-                <div>
-                    {/* <img src={bg_image} className="object-cover w-full h-200"/> */}
-                    <div className="w-full h-150 bg-black">
-                      <div className="max-w-5xl mx-auto mt-30 pt-30 pe-10">
-                         <h1 className="text-white font-bold text-6xl">We build clear websites, polished branding, and smart marketing.</h1>
-                         <p className="text-white mt-4 text-lg font-light">Code Explorer Rwanda builds clean websites, storng branding, and simple digital marketing for businesses and creators who want to grow with confidence</p>
-
-                         <div className="flex space-x-4 mt-15">
-                            <button className="bg-sky-500 text-white font-bold p-4 rounded-full hover:bg-sky-600 transition-colors">Start your Project</button>
-                            <button className="border border-sky-100 p-4 rounded-full font-bold text-white hover:bg-white hover:text-black transition duration-200">Explorer Our Services</button>
-                         </div>
-                      </div>
-                  </div>
-                  <div className="max-w-7xl mx-auto mt-5">
-                       <div>
-                            <h1 className="text-center font-bold text-sky-500">WHAT WE DO</h1>
-                            <h1 className="text-center font-bold text-4xl">Clear service that help your brand stand out.</h1>
-                            <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
-                            <div className="mt-12 flex space-x-10">
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <FaCode className="ms-1 text-xl text-sky-500 font-bold" />
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">Clear Websites</h1>
-                                      <p className="mt-1 text-gray-700">Professional websites that explain your business in seconds and work n every screen.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <FaGamepad className="ms-1 text-xl text-sky-500 font-bold" />
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">Brand Design</h1>
-                                      <p className="mt-1 text-gray-700">Logos, visuals, and social media assets that make your brand feel trusted and modern.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <FaShare className="ms-1 text-xl text-sky-500 font-bold" />
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">Digital Growth</h1>
-                                      <p className="mt-1 text-gray-700">SEO, ads, and content support that help more people discover your business online.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <FaServer className="ms-1 text-xl text-sky-500 font-bold" />
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">Reliable hosting</h1>
-                                      <p className="mt-1 text-gray-700">Domains, secure hosting, and simple support so your website stays online and safe.</p>
-                                  </div>
-                            </div>
-                       </div>
-                       
-                       <div className="mt-10">
-                            <h1 className="text-center font-bold text-sky-500">HOW IT WORKS</h1>
-                            <h1 className="text-center font-bold text-4xl">Simple steps from idea to launch.</h1>
-                            <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
-                            <div className="mt-12 flex space-x-10">
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <p className="ms-1 text-xl text-sky-500 font-bold">01</p>
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">Tell us your goal</h1>
-                                      <p className="mt-1 text-gray-700">We start with a simple conversation about your business, target audience, and what you want people to do.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <p className="ms-1 text-xl text-sky-500 font-bold">02</p>
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">We design the right solution</h1>
-                                      <p className="mt-1 text-gray-700">We create a website, brand, or marketing plan that fits your needs and your budget.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                        <p className="ms-1 text-xl text-sky-500 font-bold">03</p>
-                                      </div>
-                                      <h1 className="mt-3 text-lg font-bold">You launch with confidence</h1>
-                                      <p className="mt-1 text-gray-700">We deliver a polished result, guide you through it, and help you grow from day one.</p>
-                                  </div>
-                            </div>
-                       </div>
-                       
-                       <div className="mt-10">
-                            <h1 className="text-center font-bold text-sky-500">WHO WE SERVE</h1>
-                            <h1 className="text-center font-bold text-4xl">Built for people who want to be easy to trust online.</h1>
-                            <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4 mb-"></div>
-                            <div className="mt-12 grid grid-cols-2 space-y-4 space-x-10">
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For businesses</h1>
-                                      <p className="mt-1 text-gray-700">Shops, clinics, agencies, and service providers that want a strong online presence.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For startups</h1>
-                                      <p className="mt-1 text-gray-700">New brands that need a professional platform to look serious and attract clients.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For creators</h1>
-                                      <p className="mt-1 text-gray-700">Freelancers, coaches, and content makers who want a simple digital home.</p>
-                                  </div>
-                            </div>
-                       </div>
-                       
-                       <div className="mt-10">
-                            <h1 className="text-center font-bold text-sky-500">WHO WE SERVE</h1>
-                            <h1 className="text-center font-bold text-4xl">Built for people who want to be easy to trust online.</h1>
-                            <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
-                            <div className="mt-12 grid grid-cols-2 space-y-4 space-x-10">
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For businesses</h1>
-                                      <p className="mt-1 text-gray-700">Shops, clinics, agencies, and service providers that want a strong online presence.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For startups</h1>
-                                      <p className="mt-1 text-gray-700">New brands that need a professional platform to look serious and attract clients.</p>
-                                  </div>
-                                  
-                                  <div>
-                                      <h1 className="mt-3 text-lg font-bold">For creators</h1>
-                                      <p className="mt-1 text-gray-700">Freelancers, coaches, and content makers who want a simple digital home.</p>
-                                  </div>
-                            </div>
-                       </div>
-                      
-                      
-                       <div className="mt-10">
-                            <h1 className="text-center font-bold text-sky-500">CHOOSE A TIER</h1>
-                            <h1 className="text-center font-bold text-4xl">Pick a service tier that fits your goals and budget.</h1>
-                            <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
-                            <p className="text-center font-light text-gray-700 w-1/2 ms-75 mt-6">Choose one service or build a full digital package with clear options, transparent pricing, and a direct path to order.</p>
-                           <div className="mt-3">
-                               <div className="bg-sky-600 w-50 p-2 rounded-full">
-                                    <p className="text-center font-bold text-white">FLEXIBLE PACKAGES</p>
-                               </div>
-                              
-                               <div className="flex">
-                                   <div className="mt-2">
-                                      <h1 className="font-bold text-lg">Need a full digital launch ?</h1>
-                                      <p className="text-gray-700 text-lg">We can combine branding, design, growth, and support into one focused package that feels simple and poffesional.</p>
-                                   </div>
-                                   <button className="inline-flex bg-black text-white p-2 h-12 ms-3 rounded-full hover:bg-sky-500 transition-colors">Build a full digital package <FaArrowRight className="ms-3 mt-2 hover:translate-x-1.5 transition duration-200" /></button>
-                               </div>
-                           </div>
-                           
-                         <div className="grid grid-cols-2 mb-4 space-x-15 space-y-15">
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaCode className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Web Development</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Websites & Web Apps</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Modern websites and web-based tools that help your business look credible and perform smoothly.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
-
-                                       {/* landinng page table */}
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Landing Page</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              250,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business Website</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              450,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">E-commerce store</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              500,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Web app/ dashboard</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              800,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Build with web development package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaAddressBook className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Graphic design</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Branding & Visuals</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Proffesional logos, branded visuals, and print materials that make your business look polished.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 80, 000 FRW</p>
-
-                                       {/* landinng page table */}
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Logo Design</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              40,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Brand kit</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              100,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business cards</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              15,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Flayers & brochures</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              10,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Create this graphic design package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaCamera className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Photography</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Product & Business photos</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Clear image editing, you just give us your image and we transofrm it into high image vue.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 10, 000 FRW</p>
-
-                                       {/* landinng page table */}
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Product photos</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              10,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Corporate portraits</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              20,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Event coverage</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              80,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Photo editing</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              included
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Book this photography package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            {/* videography */}
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaVideo className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Videography</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Reels & Promote video</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Short promotional videos and storytelling content that help people connect with your brand quickly.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
-
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Social reel</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              30,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Product video</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              100,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Corporate video</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              100,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Editing & delivery</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              included
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Book this videography package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            {/* digital marketing */}
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaShare className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Digital marketing</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Websites & Web Apps</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">SEO, content support, and online visibility services that help more people find your business.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 250, 000 FRW</p>
-
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">SEO setup</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              150,000 FRW/mo
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Website copy</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              70,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Social content plan</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              60,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Adds Support</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              170,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Grow with digital marketing package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            
-                            {/* Corporate office */}
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaBook className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Corporate office & documentation</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Admin & professional docs</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Professional business documents, reports, and formal materials that help your company look organized.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 50, 000 FRW</p>
-
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Business profile</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              50,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Proposal & report design</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              40,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Company documents</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              50,000 FRW
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Document formating</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                              included
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Get this documentation package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            {/* Cloud hosting & domain registry */}
-                            <div className="mt-12 space-y-4 space-x-10">
-                              <div>
-                                <div className="flex space-x-6">
-                                 <div className="bg-sky-100 p-4 w-15 rounded-xl">
-                                      <FaCode className="ms-1 text-xl text-sky-500 font-bold" />
-                                  </div>
-
-                                  <div className="flex space-x-3">
-                                     <h1 className="font-bold">Cloud hosting & domain registry</h1>
-                                      <div className="bg-sky-200 p-1 h-8 rounded-lg font-bold text-sky-500">
-                                        <p className="text-sm">Secure online presence</p>
-                                      </div>
-                                  </div>
-                                </div>
-                                  <p className="ms-18  text-gray-700 font-light">Reliable domains, hosting, business emails, and backups that keep your website active and protected.</p>
-                            </div>
-                        
-                            <div className="mt-3">
-                                      <p className="mt-4 bg-sky-200 p-1 h-9 w-46 text-center rounded-lg font-bold text-sky-500">FROM 15, 000 FRW</p>
-
-                                       {/* landinng page table */}
-                                        <div className="mt-3">
-
-                                          <div className="flex justify-between">
-                                            <p className="text-lg text-gray-600">Domain registration</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                               15,000 RWF / year
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Hosting package</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                               40,000 RWF / year
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Business email</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                                25,000 RWF / year
-                                            </p>
-                                          </div>
-
-                                          <div className="border border-dashed border-gray-400"></div>
-
-
-                                          <div className="flex justify-between mt-3">
-                                            <p className="text-lg text-gray-600">Backup support</p>
-                                            <p className="text-lg text-gray-600 font-bold mb-3">
-                                               20,000 RWF / year
-                                            </p>
-                                          </div>
-
-                                          <div className="mt-5">
-                                            <button className="inline-flex justify-center text-center bg-black text-white w-full p-2 py-3 rounded-full hover:bg-sky-500 transition duration-150 font-bold">Choose this hosting package <FaArrowRight className="ms-4 mt-2 "/> </button>
-                                          </div>
-                                        </div>
-                                    </div>
-                            </div>
-                       </div>
-                     </div>
-
-                    <div className="mt-7 max-w-5xl mx-auto">
-                         <h1 className="text-center font-bold text-sky-500">FAQ</h1>
-                         <h1 className="text-center font-bold text-4xl">Helpful answers for first-time visitors.</h1>
-                        <div className="border-5 border-b border-sky-500 w-20 relative left-150 top-4"></div>
-                        <div className="mt-7">
-                           <div className="mb-4">
-                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
-                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">What kind of bussiness do you help ?</h1>
-                                    <FaArrowDown className="flex justify-end items-end"/>
-                               </div>
-                               <div className="mt-3 ms-12">
-                                <p className="text-gray-800 text-lg">We support small businesses, startups, schools, shops, and creative professionals, who want a modern and trustworthy online presence.</p>
-                               </div>
-                           </div>
-                           
-                           <div className="mb-4">
-                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
-                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">Can I start with one service only ?</h1>
-                                    <FaArrowDown className="flex justify-end items-end"/>
-                               </div>
-                               <div className="mt-3 ms-12">
-                                <p className="text-gray-800 text-lg">Yes. Many clients begin with a website or logo and later add marketing, hosting or more design support.</p>
-                               </div>
-                           </div>
-                           
-                           <div className="mb-4">
-                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
-                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">Do you help with mobile-friendly websites ?</h1>
-                                    <FaArrowDown className="flex justify-end items-end"/>
-                               </div>
-                               <div className="mt-3 ms-12">
-                                <p className="text-gray-800 text-lg">Absolutely every website we build is designed to look clear and easy to use on mobil, tablet and desktop.</p>
-                               </div>
-                           </div>
-                           
-                           <div className="mb-4">
-                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
-                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">What kind of bussiness do you help ?</h1>
-                                    <FaArrowDown className="flex justify-end items-end"/>
-                               </div>
-                               <div className="mt-3 ms-12">
-                                <p className="text-gray-800 text-lg">We support small businesses, startups, schools, shops, and creative professionals, who want a modern and trustworthy online presence.</p>
-                               </div>
-                           </div>
-                           
-                           <div className="mb-4">
-                                <div className="flex space-x-3 border-b-2 border-dashed border-gray-400">
-                                    <FaQuestion className="border rounded-full border-sky-500 text-sky-500 mt-1" /> <h1 className="font-bold text-xl text-gray-700">How long does a project take ?</h1>
-                                    <FaArrowDown className="flex justify-end items-end"/>
-                               </div>
-                               <div className="mt-3 ms-12">
-                                <p className="text-gray-800 text-lg">Simple projects can be ready in few days, while larger builds may take a couple of weeks, it depend on scope.</p>
-                               </div>
-                           </div>
-
+        <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
+            {/* Hero Section */}
+            <section className="relative min-h-screen flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
+                
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-4xl"
+                    >
+                        <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-400 mb-6">
+                            <FaRocket className="mr-2" />
+                            <span className="text-sm font-medium">Digital Innovation Since 2023</span>
                         </div>
-                    </div>
-                    <div className="bg-sky-100 mt-12 p-5 rounded-2xl border border-sky-500 mb-9 flex justify-between">
-                       <div>
-                           <h1 className="ms-10 text-3xl text-gray-700 font-bold">Ready to build something clear and professional ?</h1>
-                           <p className="mt-3 text-lg text-gray-800">Let us create a website and digital experience that helps your audience understand your business quickly.</p>
-                       </div>
-                       <div className="mt-7 me-3 ">
-                             <button className="bg-sky-500 py-3 px-5 rounded-full text-white inline-flex hover:bg-sky-600 transition duration-200 hover:translate-y-1"><FaEnvelope className="mt-1 me-3"/> Talk to us</button>
-                       </div>
-                    </div>
-                  </div>
+                        
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                            We Build Clear Websites,
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                                Polished Branding
+                            </span>
+                            and Smart Marketing.
+                        </h1>
+                        
+                        <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl">
+                            Code Explorer Rwanda crafts exceptional digital experiences — from stunning websites to powerful branding and results-driven marketing strategies.
+                        </p>
+                        
+                        <div className="mt-10 flex flex-wrap gap-4">
+                            <motion.button 
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                            >
+                                Start Your Project
+                            </motion.button>
+                            
+                            <motion.button 
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
+                            >
+                                Explore Solutions
+                            </motion.button>
+                        </div>
+                    </motion.div>
                 </div>
-            </div>
+            </section>
+
+            {/* Services Section */}
+            <section className="py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="text-center"
+                    >
+                        <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 font-bold rounded-full text-sm tracking-wider">
+                            WHAT WE DO
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                            Clear Services That Make Your Brand Shine
+                        </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                    </motion.div>
+
+                    <motion.div 
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                    >
+                        {serviceCards.map((service, index) => {
+                            const IconComponent = service.icon;
+                            const colorMap = {
+                                blue: "from-blue-500 to-blue-600",
+                                amber: "from-amber-500 to-amber-600",
+                                emerald: "from-emerald-500 to-emerald-600",
+                                purple: "from-purple-500 to-purple-600"
+                            };
+                            const bgColorMap = {
+                                blue: "bg-blue-50",
+                                amber: "bg-amber-50",
+                                emerald: "bg-emerald-50",
+                                purple: "bg-purple-50"
+                            };
+                            const textColorMap = {
+                                blue: "text-blue-600",
+                                amber: "text-amber-600",
+                                emerald: "text-emerald-600",
+                                purple: "text-purple-600"
+                            };
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    variants={fadeInUp}
+                                    whileHover={{ y: -10 }}
+                                    className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
+                                >
+                                    <div className={`w-16 h-16 ${bgColorMap[service.color]} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                                        <IconComponent className={`text-3xl ${textColorMap[service.color]}`} />
+                                    </div>
+                                    <h3 className="text-xl font-bold mt-6 mb-3">{service.title}</h3>
+                                    <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                                    <div className="mt-4 flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        Learn More <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Process Section */}
+            <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
+                <div className="max-w-7xl mx-auto">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="text-center"
+                    >
+                        <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-600 font-bold rounded-full text-sm tracking-wider">
+                            HOW IT WORKS
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                            Simple Steps From Idea to Launch
+                        </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
+                    </motion.div>
+
+                    <motion.div 
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12"
+                    >
+                        {processSteps.map((step, index) => (
+                            <motion.div
+                                key={index}
+                                variants={fadeInUp}
+                                className="relative group"
+                            >
+                                <div className="text-6xl font-bold text-blue-100 group-hover:text-blue-200 transition-colors">
+                                    {step.number}
+                                </div>
+                                <h3 className="text-xl font-bold mt-4 mb-3">{step.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                                {index < processSteps.length - 1 && (
+                                    <div className="hidden md:block absolute top-10 right-0 transform translate-x-1/2">
+                                        <FaArrowRight className="text-3xl text-blue-200" />
+                                    </div>
+                                )}
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Pricing Section */}
+            <section className="py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="text-center"
+                    >
+                        <span className="inline-block px-4 py-2 bg-purple-100 text-purple-600 font-bold rounded-full text-sm tracking-wider">
+                            PRICING
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                            Choose the Perfect Plan For Your Goals
+                        </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+                    </motion.div>
+
+                    <motion.div 
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+                    >
+                        {pricingTiers.map((tier, index) => {
+                            const IconComponent = tier.icon;
+                            const colorMap = {
+                                blue: "from-blue-500 to-blue-600",
+                                amber: "from-amber-500 to-amber-600",
+                                emerald: "from-emerald-500 to-emerald-600"
+                            };
+                            const borderMap = {
+                                blue: "border-blue-200",
+                                amber: "border-amber-200",
+                                emerald: "border-emerald-200"
+                            };
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    variants={fadeInUp}
+                                    whileHover={{ y: -10 }}
+                                    className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${borderMap[tier.color]} relative overflow-hidden`}
+                                >
+                                    {index === 1 && (
+                                        <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-1 rounded-bl-lg text-sm font-bold">
+                                            Most Popular
+                                        </div>
+                                    )}
+                                    <div className="flex items-center mb-6">
+                                        <IconComponent className={`text-3xl text-${tier.color}-500 mr-3`} />
+                                        <h3 className="text-2xl font-bold">{tier.tier}</h3>
+                                    </div>
+                                    <div className="mb-6">
+                                        <span className="text-4xl font-bold">{tier.price}</span>
+                                        <span className="text-gray-500"> FRW</span>
+                                    </div>
+                                    <ul className="space-y-3 mb-8">
+                                        {tier.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center text-gray-600">
+                                                <FaCheckCircle className="text-green-500 mr-2 flex-shrink-0" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className={`w-full py-3 bg-gradient-to-r ${colorMap[tier.color]} text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300`}
+                                    >
+                                        Get Started
+                                    </motion.button>
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+                <div className="max-w-4xl mx-auto">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="text-center"
+                    >
+                        <span className="inline-block px-4 py-2 bg-pink-100 text-pink-600 font-bold rounded-full text-sm tracking-wider">
+                            FAQ
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                            Common Questions Answered
+                        </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full"></div>
+                    </motion.div>
+
+                    <motion.div 
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="mt-12 space-y-4"
+                    >
+                        {[
+                            { q: "What businesses do you work with?", a: "We work with startups, established businesses, schools, nonprofits, and creative professionals across all industries. Every project is customized to your unique needs." },
+                            { q: "Can I start with just one service?", a: "Absolutely! Many clients start with a website or logo design and gradually add more services as they grow. We're flexible and scale with you." },
+                            { q: "Are your websites mobile-friendly?", a: "Yes! Every site we build is fully responsive and optimized for all devices — from smartphones to desktops." },
+                            { q: "How long does a typical project take?", a: "Timelines vary based on scope. Simple websites can launch in 5-7 days, while complex web applications may take 3-4 weeks." },
+                            { q: "Do you offer ongoing support?", a: "Yes! We provide maintenance packages, hosting services, and continuous support to ensure your digital presence stays fresh and secure." }
+                        ].map((faq, index) => (
+                            <motion.div
+                                key={index}
+                                variants={fadeInUp}
+                                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100"
+                            >
+                                <div className="flex items-start justify-between cursor-pointer group">
+                                    <div className="flex items-start">
+                                        <FaQuestion className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                                        <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                                            {faq.q}
+                                        </h3>
+                                    </div>
+                                    <FaArrowDown className="text-gray-400 group-hover:text-blue-500 transition-colors flex-shrink-0 ml-4" />
+                                </div>
+                                <p className="mt-3 text-gray-600 pl-10">{faq.a}</p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 px-4">
+                <div className="max-w-5xl mx-auto">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-12 shadow-2xl relative overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+                        
+                        <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-white">
+                                    Ready to Build Something Exceptional?
+                                </h2>
+                                <p className="mt-4 text-lg text-blue-100 max-w-2xl">
+                                    Let's create a digital experience that captures your vision and connects with your audience.
+                                </p>
+                            </div>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap"
+                            >
+                                <FaEnvelope className="mr-2" />
+                                Start a Conversation
+                            </motion.button>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
         </div>
-    )
-}
+    );
+};
 
 export default Home;
