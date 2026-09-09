@@ -79,18 +79,15 @@ const Nav = () => {
                     </Link>
                 </div>
 
-                {/* CTA Button */}
                 <div className="hidden lg:block">
                     <Link 
                         to="/get-started" 
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out"
                     >
-                        <FaRocket className="me-2" />
                         Launch Project
                     </Link>
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -104,7 +101,6 @@ const Nav = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
             <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="px-4 py-2 space-y-1 bg-white border-t border-gray-100">
                     <Link to="/" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
