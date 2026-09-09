@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Portfolio from './components/Portifolio'
 import Solution from './components/Solution'
+import Insights from './components/Insights'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
            <Route path='/about' element={<About />} />
            <Route path='/Portfolio' element={<Portfolio />} />
            <Route path='/solution' element={<Solution />} />
+           <Route path='/insights' element={<Insights />} />
        </Routes>
     </BrowserRouter>    
  )
