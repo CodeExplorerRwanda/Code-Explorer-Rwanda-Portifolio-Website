@@ -3,11 +3,17 @@ import {
     FaBook, FaRocket, FaArrowRight, FaEnvelope, FaWhatsapp,
     FaCheckCircle, FaClock, FaShieldAlt, FaGlobe, FaMobile,
     FaLaptop, FaDatabase, FaChartLine, FaGem, FaCrown,
-    FaUserTie, FaPenFancy, FaLayerGroup, FaBullhorn
+    FaUserTie, FaPenFancy, FaLayerGroup, FaBullhorn, FaTimes,
+    FaHtml5, FaCss3, FaReact, FaNodeJs, FaFigma, FaJs,
+    FaPhp, FaPython, FaWordpress
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const Solution = () => {
+    const [selectedService, setSelectedService] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -22,132 +28,178 @@ const Solution = () => {
         }
     };
 
-    // Services from images
+    // Detailed services data
     const services = [
         {
+            id: "web-development",
             icon: FaCode,
             title: "Website Development",
             price: "220,000 RWF",
             description: "We build clean and professional websites for your business. We make sure your site looks beautiful on mobile phones and computers so you can get more clients.",
-            features: ["Company Profile Websites", "Personal Blogs & Portfolios"],
+            fullDescription: "We build clean and professional websites for your business. We make sure your site looks beautiful on mobile phones and computers so you can get more clients. From landing pages to complex web applications, we deliver solutions that drive results.",
+            features: [
+                "Company Profile Websites",
+                "Personal Blogs & Portfolios",
+                "Online E-commerce Stores",
+                "Custom Dashboards & Apps"
+            ],
+            tools: ["HTML & CSS", "React.js", "Node.js", "Figma Design"],
             color: "blue",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "7 Days"
         },
         {
+            id: "graphic-design",
             icon: FaPalette,
             title: "Graphic Design",
-            price: "From 80,000 RWF",
+            price: "90,000 RWF",
             description: "Professional logos, branded visuals, and print materials that make your business look polished and trustworthy.",
-            features: ["Logo Design", "Brand Identity Kits", "Business Cards"],
+            fullDescription: "Professional logos, branded visuals, and print materials that make your business look polished and trustworthy. We create visual identities that capture your brand's essence and resonate with your target audience.",
+            features: [
+                "Logo Design",
+                "Brand Identity Kits",
+                "Business Cards",
+                "Flyers & Brochures"
+            ],
+            tools: ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Canva Pro"],
             color: "amber",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "5 Days"
         },
         {
+            id: "web-hosting",
             icon: FaServer,
             title: "Web Hosting",
             price: "80,000 RWF/month",
             description: "Reliable cloud hosting with daily backups, security monitoring, and 24/7 technical support for your website.",
-            features: ["Secure Cloud Hosting", "Daily Backups", "24/7 Monitoring"],
+            fullDescription: "Reliable cloud hosting with daily backups, security monitoring, and 24/7 technical support for your website. We ensure your site stays online, fast, and secure with enterprise-grade infrastructure.",
+            features: [
+                "Secure Cloud Hosting",
+                "Daily Backups",
+                "24/7 Monitoring",
+                "SSL Certificate Included"
+            ],
+            tools: ["AWS", "DigitalOcean", "cPanel", "Cloudflare"],
             color: "emerald",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "24 Hours"
         },
         {
+            id: "domain-name",
             icon: FaGlobe,
             title: "Website Domain Name",
             price: "25,000 RWF/year",
             description: "Professional domain registration for your business with easy management and renewal options.",
-            features: [".RW Domain Registration", "Domain Management", "Email Setup"],
+            fullDescription: "Professional domain registration for your business with easy management and renewal options. Get your perfect .rw domain or any other TLD with our hassle-free registration service.",
+            features: [
+                ".RW Domain Registration",
+                "Domain Management",
+                "Email Setup",
+                "DNS Management"
+            ],
+            tools: ["Namecheap", "GoDaddy", "Cloudflare DNS"],
             color: "purple",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "Same Day"
         },
         {
+            id: "digital-marketing",
             icon: FaShare,
             title: "Digital Marketing & SEO",
             price: "110,000 RWF",
             description: "SEO optimization, content strategy, and targeted ads to expand your online reach and attract more customers.",
-            features: ["SEO Setup", "Content Marketing", "Social Media Management"],
+            fullDescription: "SEO optimization, content strategy, and targeted ads to expand your online reach and attract more customers. We help you rank higher on Google and convert visitors into loyal customers.",
+            features: [
+                "SEO Setup",
+                "Content Marketing",
+                "Social Media Management",
+                "Google Ads Management"
+            ],
+            tools: ["Google Analytics", "SEO Tools", "Meta Business Suite", "Google Ads"],
             color: "rose",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "14 Days"
         },
         {
+            id: "videography",
             icon: FaVideo,
             title: "Videography",
             price: "150,000 RWF",
             description: "Short promotional videos and storytelling content that help people connect with your brand quickly.",
-            features: ["Social Reels", "Product Videos", "Corporate Videos"],
+            fullDescription: "Short promotional videos and storytelling content that help people connect with your brand quickly. From social media reels to corporate documentaries, we bring your brand stories to life.",
+            features: [
+                "Social Reels",
+                "Product Videos",
+                "Corporate Videos",
+                "Event Coverage"
+            ],
+            tools: ["Premiere Pro", "Final Cut Pro", "DaVinci Resolve", "After Effects"],
             color: "indigo",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "10 Days"
         },
         {
+            id: "photography",
             icon: FaCamera,
             title: "Photography",
             price: "120,000 RWF",
             description: "Professional photography services including product photos, corporate portraits, and event coverage.",
-            features: ["Product Photography", "Corporate Portraits", "Event Coverage"],
+            fullDescription: "Professional photography services including product photos, corporate portraits, and event coverage. We capture stunning images that showcase your products, people, and brand in the best light.",
+            features: [
+                "Product Photography",
+                "Corporate Portraits",
+                "Event Coverage",
+                "Photo Editing"
+            ],
+            tools: ["Canon EOS", "Sony Alpha", "Lightroom", "Photoshop"],
             color: "cyan",
-            orderLink: "#"
+            orderLink: "#",
+            deliveryTime: "7 Days"
         },
         {
+            id: "documentation",
             icon: FaBook,
             title: "Office & Documentation",
             price: "70,000 RWF",
             description: "Professional business documents, reports, and formal materials that help your company look organized.",
-            features: ["Business Profiles", "Proposal Design", "Document Formatting"],
+            fullDescription: "Professional business documents, reports, and formal materials that help your company look organized. From business profiles to proposal designs, we ensure your documentation reflects professionalism.",
+            features: [
+                "Business Profiles",
+                "Proposal Design",
+                "Document Formatting",
+                "Company Reports"
+            ],
+            tools: ["Microsoft Office", "Google Workspace", "Adobe Acrobat", "LaTeX"],
             color: "teal",
-            orderLink: "#"
-        }
-    ];
-
-    // Execution model steps
-    const executionSteps = [
-        {
-            day: "Day 1",
-            title: "Target & Briefing",
-            description: "Place your order instantly via our system form. We establish an active WhatsApp channel within 4 hours to review your project files."
-        },
-        {
-            day: "Days 2-4",
-            title: "Creative Construction",
-            description: "Our project studio crafts your interface designs, high-end content layout, or document parameters. We present clean prototypes for review."
-        },
-        {
-            day: "Days 5-7",
-            title: "Systems Launch",
-            description: "We deploy secure servers, map domain records, and configure Google SEO indexing. Your team receives direct operational hands-on training."
-        }
-    ];
-
-    // Order steps
-    const orderSteps = [
-        {
-            step: "Step 1",
-            title: "Hit the service you need",
-            description: "Choose from website design, graphic work, video, or document help. Each option explains what we do for you."
-        },
-        {
-            step: "Step 2",
-            title: "Click order and write us",
-            description: "Open the order form, type your name and phone, then explain what you want in simple words."
-        },
-        {
-            step: "Step 3",
-            title: "We reply fast on WhatsApp",
-            description: "Our team answers quickly, confirms your price, and starts work so you can relax and follow the simple plan."
+            orderLink: "#",
+            deliveryTime: "4 Days"
         }
     ];
 
     const getColorClasses = (color) => {
         const colorMap = {
-            blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", gradient: "from-blue-500 to-blue-600", hover: "hover:bg-blue-50" },
-            amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", gradient: "from-amber-500 to-amber-600", hover: "hover:bg-amber-50" },
-            emerald: { bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", gradient: "from-emerald-500 to-emerald-600", hover: "hover:bg-emerald-50" },
-            purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", gradient: "from-purple-500 to-purple-600", hover: "hover:bg-purple-50" },
-            rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200", gradient: "from-rose-500 to-rose-600", hover: "hover:bg-rose-50" },
-            indigo: { bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-200", gradient: "from-indigo-500 to-indigo-600", hover: "hover:bg-indigo-50" },
-            cyan: { bg: "bg-cyan-50", text: "text-cyan-600", border: "border-cyan-200", gradient: "from-cyan-500 to-cyan-600", hover: "hover:bg-cyan-50" },
-            teal: { bg: "bg-teal-50", text: "text-teal-600", border: "border-teal-200", gradient: "from-teal-500 to-teal-600", hover: "hover:bg-teal-50" }
+            blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", gradient: "from-blue-500 to-blue-600", hover: "hover:bg-blue-50", light: "bg-blue-100" },
+            amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", gradient: "from-amber-500 to-amber-600", hover: "hover:bg-amber-50", light: "bg-amber-100" },
+            emerald: { bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", gradient: "from-emerald-500 to-emerald-600", hover: "hover:bg-emerald-50", light: "bg-emerald-100" },
+            purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", gradient: "from-purple-500 to-purple-600", hover: "hover:bg-purple-50", light: "bg-purple-100" },
+            rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200", gradient: "from-rose-500 to-rose-600", hover: "hover:bg-rose-50", light: "bg-rose-100" },
+            indigo: { bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-200", gradient: "from-indigo-500 to-indigo-600", hover: "hover:bg-indigo-50", light: "bg-indigo-100" },
+            cyan: { bg: "bg-cyan-50", text: "text-cyan-600", border: "border-cyan-200", gradient: "from-cyan-500 to-cyan-600", hover: "hover:bg-cyan-50", light: "bg-cyan-100" },
+            teal: { bg: "bg-teal-50", text: "text-teal-600", border: "border-teal-200", gradient: "from-teal-500 to-teal-600", hover: "hover:bg-teal-50", light: "bg-teal-100" }
         };
         return colorMap[color] || colorMap.blue;
+    };
+
+    const openServiceDetail = (service) => {
+        setSelectedService(service);
+        setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeServiceDetail = () => {
+        setIsModalOpen(false);
+        document.body.style.overflow = 'auto';
+        setTimeout(() => setSelectedService(null), 300);
     };
 
     return (
@@ -170,14 +222,14 @@ const Solution = () => {
                         </div>
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                            Services Made Easy
+                            Hit the service you need
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
-                                for Every Business
+                                and we'll build it
                             </span>
                         </h1>
                         
                         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl">
-                            Choose the service you need, send a short message, and our team will start building your online presence in 7 days.
+                            Choose from website design, graphic work, video, or document help. Each option explains what we do for you.
                         </p>
                         
                         <div className="mt-10 flex flex-wrap gap-4">
@@ -201,33 +253,28 @@ const Solution = () => {
                 </div>
             </section>
 
-            {/* Quick Service Guide */}
-            <section className="py-16 px-4 bg-white">
+            {/* Services Grid */}
+            <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="text-center"
+                        className="text-center mb-16"
                     >
                         <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 font-bold rounded-full text-sm tracking-wider">
-                            QUICK SERVICE GUIDE
+                            SERVICES
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
-                            Find your service fast
+                            Choose the service you need
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Each service is explained in plain words so anyone can understand what to order and how it helps the business.
+                            Click any service to see full details, features, tools used, and pricing information.
                         </p>
                     </motion.div>
-                </div>
-            </section>
 
-            {/* Services Grid */}
-            <section className="py-16 px-4 bg-gradient-to-b from-white to-sky-50">
-                <div className="max-w-7xl mx-auto">
                     <motion.div 
                         variants={staggerContainer}
                         initial="hidden"
@@ -243,7 +290,8 @@ const Solution = () => {
                                     key={index}
                                     variants={fadeInUp}
                                     whileHover={{ y: -10 }}
-                                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
+                                    onClick={() => openServiceDetail(service)}
+                                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group cursor-pointer"
                                 >
                                     <div className={`w-16 h-16 ${colors.bg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-6`}>
                                         <IconComponent className={`text-3xl ${colors.text}`} />
@@ -257,27 +305,14 @@ const Solution = () => {
                                         {service.price}
                                     </p>
                                     
-                                    <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                                    <p className="text-gray-600 leading-relaxed text-sm">
                                         {service.description}
                                     </p>
                                     
-                                    <div className="space-y-2 mb-4">
-                                        {service.features.map((feature, idx) => (
-                                            <div key={idx} className="flex items-center text-sm text-gray-700">
-                                                <FaCheckCircle className={`${colors.text} mr-2 flex-shrink-0`} />
-                                                {feature}
-                                            </div>
-                                        ))}
+                                    <div className="mt-4 flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        Click to see details 
+                                        <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
-                                    
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className={`w-full py-3 bg-gradient-to-r ${colors.gradient} text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group`}
-                                    >
-                                        Order Now
-                                        <FaArrowRight className="ml-2 group-hover:translate-x-1 transition" />
-                                    </motion.button>
                                 </motion.div>
                             );
                         })}
@@ -285,8 +320,112 @@ const Solution = () => {
                 </div>
             </section>
 
+            {/* Service Detail Modal */}
+            <AnimatePresence>
+                {isModalOpen && selectedService && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+                        onClick={closeServiceDetail}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 30 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 30 }}
+                            className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {selectedService && (
+                                <div className="p-8 md:p-10">
+                                    {/* Header */}
+                                    <div className="flex items-start justify-between mb-6">
+                                        <div className="flex items-center space-x-4">
+                                            <div className={`w-16 h-16 ${getColorClasses(selectedService.color).bg} rounded-2xl flex items-center justify-center`}>
+                                                <selectedService.icon className={`text-3xl ${getColorClasses(selectedService.color).text}`} />
+                                            </div>
+                                            <div>
+                                                <h2 className="text-2xl font-bold">{selectedService.title}</h2>
+                                                <p className="text-lg font-bold text-gray-500">{selectedService.price}</p>
+                                            </div>
+                                        </div>
+                                        <button
+                                            onClick={closeServiceDetail}
+                                            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                                        >
+                                            <FaTimes className="text-2xl text-gray-500" />
+                                        </button>
+                                    </div>
+
+                                    {/* Delivery Time Badge */}
+                                    <div className={`inline-flex items-center px-4 py-2 ${getColorClasses(selectedService.color).bg} ${getColorClasses(selectedService.color).text} rounded-full text-sm font-bold mb-6`}>
+                                        <FaClock className="mr-2" />
+                                        Delivery in {selectedService.deliveryTime}
+                                    </div>
+
+                                    {/* Full Description */}
+                                    <div className="mb-6">
+                                        <h4 className="text-lg font-bold mb-2">What We Do</h4>
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {selectedService.fullDescription}
+                                        </p>
+                                    </div>
+
+                                    {/* Features */}
+                                    <div className="mb-6">
+                                        <h4 className="text-lg font-bold mb-3">What We Do Exactly:</h4>
+                                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            {selectedService.features.map((feature, idx) => (
+                                                <li key={idx} className="flex items-center text-gray-700">
+                                                    <FaCheckCircle className={`${getColorClasses(selectedService.color).text} mr-2 flex-shrink-0`} />
+                                                    {feature}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Tools */}
+                                    <div className="mb-8">
+                                        <h4 className="text-lg font-bold mb-3">Tools & Technologies Used:</h4>
+                                        <div className="flex flex-wrap gap-3">
+                                            {selectedService.tools.map((tool, idx) => (
+                                                <span key={idx} className={`px-4 py-2 ${getColorClasses(selectedService.color).bg} ${getColorClasses(selectedService.color).text} rounded-full text-sm font-medium`}>
+                                                    {tool}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Order Button */}
+                                    <div className="flex flex-col sm:flex-row gap-4">
+                                        <motion.button
+                                            whileHover={{ scale: 1.03 }}
+                                            whileTap={{ scale: 0.97 }}
+                                            className={`flex-1 py-4 bg-gradient-to-r ${getColorClasses(selectedService.color).gradient} text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300`}
+                                        >
+                                            Order This Service
+                                            <FaArrowRight className="inline ml-2" />
+                                        </motion.button>
+                                        
+                                        <motion.button
+                                            whileHover={{ scale: 1.03 }}
+                                            whileTap={{ scale: 0.97 }}
+                                            className="flex-1 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                                        >
+                                            <FaWhatsapp className="mr-2 text-xl" />
+                                            Order via WhatsApp
+                                        </motion.button>
+                                    </div>
+                                </div>
+                            )}
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* How to Order Section */}
-            <section className="py-20 px-4">
+            <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
                         initial="hidden"
@@ -311,23 +450,50 @@ const Solution = () => {
                         viewport={{ once: true }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
-                        {orderSteps.map((step, index) => (
-                            <motion.div
-                                key={index}
-                                variants={fadeInUp}
-                                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
-                            >
-                                <div className="text-5xl font-bold text-emerald-100 group-hover:text-emerald-200 transition-colors mb-4">
-                                    {step.step}
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition">
-                                    {step.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {step.description}
-                                </p>
-                            </motion.div>
-                        ))}
+                        <motion.div
+                            variants={fadeInUp}
+                            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
+                        >
+                            <div className="text-5xl font-bold text-emerald-100 group-hover:text-emerald-200 transition-colors mb-4">
+                                Step 1
+                            </div>
+                            <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition">
+                                Hit the service you need
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Choose from website design, graphic work, video, or document help. Each option explains what we do for you.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            variants={fadeInUp}
+                            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
+                        >
+                            <div className="text-5xl font-bold text-emerald-100 group-hover:text-emerald-200 transition-colors mb-4">
+                                Step 2
+                            </div>
+                            <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition">
+                                Click order and write us
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Open the order form, type your name and phone, then explain what you want in simple words.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            variants={fadeInUp}
+                            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
+                        >
+                            <div className="text-5xl font-bold text-emerald-100 group-hover:text-emerald-200 transition-colors mb-4">
+                                Step 3
+                            </div>
+                            <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition">
+                                We reply fast on WhatsApp
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Our team answers quickly, confirms your price, and starts work so you can relax and follow the simple plan.
+                            </p>
+                        </motion.div>
                     </motion.div>
 
                     <motion.div 
@@ -350,7 +516,7 @@ const Solution = () => {
             </section>
 
             {/* Execution Model Section */}
-            <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
+            <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
                         initial="hidden"
@@ -378,7 +544,23 @@ const Solution = () => {
                         viewport={{ once: true }}
                         className="space-y-6"
                     >
-                        {executionSteps.map((step, index) => (
+                        {[
+                            {
+                                day: "Day 1",
+                                title: "Target & Briefing",
+                                description: "Place your order instantly via our system form. We establish an active WhatsApp channel within 4 hours to review your project files."
+                            },
+                            {
+                                day: "Days 2-4",
+                                title: "Creative Construction",
+                                description: "Our project studio crafts your interface designs, high-end content layout, or document parameters. We present clean prototypes for review."
+                            },
+                            {
+                                day: "Days 5-7",
+                                title: "Systems Launch",
+                                description: "We deploy secure servers, map domain records, and configure Google SEO indexing. Your team receives direct operational hands-on training."
+                            }
+                        ].map((step, index) => (
                             <motion.div
                                 key={index}
                                 variants={fadeInUp}
