@@ -7,9 +7,11 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
+    const navigate = useNavigate();
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -28,14 +30,14 @@ const Home = () => {
         { 
             icon: FaCode, 
             title: "Modern Websites", 
-            desc: "Professional websites that explain your business clearly and work beautifully on every screen.", 
+            desc: "Professional websites and AI-based project that explain your business clearly and work beautifully on every screen.", 
             color: "blue" 
         },
         { 
             icon: FaPalette, 
             title: "Brand Design", 
             desc: "Logos, visuals, and social assets that make your brand feel trustworthy and contemporary.", 
-            color: "amber" 
+            color: "yellow" 
         },
         { 
             icon: FaShare, 
@@ -86,7 +88,7 @@ const Home = () => {
             price: "250,000",
             subtitle: "Websites & Web Apps",
             features: [
-                { name: "Landing Page", price: "250,000 FRW" },
+                { name: "Mobile App", price: "400,000 FRW" },
                 { name: "Business Website", price: "450,000 FRW" },
                 { name: "E-commerce store", price: "500,000 FRW" },
                 { name: "Web app/ dashboard", price: "800,000 FRW" }
@@ -94,15 +96,30 @@ const Home = () => {
             description: "Modern websites and web-based tools that help your business look credible and perform smoothly."
         },
         {
+            tier: "AI based projects",
+            icon: FaCode,
+            color: "cyan",
+            price: "80,000",
+            subtitle: "AI & Modern",
+            features: [
+                { name: "ML-based project", price: "250,000 FRW" },
+                { name: "DL-based project", price: "300,000 FRW" },
+                { name: "AI-based project", price: "350,000 FRW" },
+                { name: "Face recognation website", price: "250,000 FRW" }
+            ],
+            description: "Professional logos, branded visuals, and print materials that make your business look polished."
+        },
+        
+        {
             tier: "Graphic Design",
             icon: FaAddressBook,
-            color: "amber",
+            color: "yellow",
             price: "80,000",
             subtitle: "Branding & Visuals",
             features: [
                 { name: "Logo Design", price: "40,000 FRW" },
                 { name: "Brand kit", price: "100,000 FRW" },
-                { name: "Business cards", price: "15,000 FRW" },
+                { name: "Business cards", price: "25,000 FRW" },
                 { name: "Flayers & brochures", price: "10,000 FRW" }
             ],
             description: "Professional logos, branded visuals, and print materials that make your business look polished."
@@ -125,7 +142,7 @@ const Home = () => {
             tier: "Videography",
             icon: FaVideo,
             color: "purple",
-            price: "250,000",
+            price: "150,000",
             subtitle: "Reels & Promo video",
             features: [
                 { name: "Social reel", price: "30,000 FRW" },
@@ -207,18 +224,19 @@ const Home = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                             We build clear websites,
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 polished branding
                             </span>
                             and smart marketing.
                         </h1>
                         
                         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl">
-                            Code Explorer Rwanda crafts clean websites, strong branding, and straightforward digital marketing for businesses and creators who want to grow with confidence.
+                            Code Explorer Rwanda crafts clean websites, better AI based applications,strong branding, and straightforward digital marketing for businesses and creators who want to grow with confidence.
                         </p>
                         
                         <div className="mt-10 flex flex-wrap gap-4">
                             <motion.button 
+                                onClick={() => navigate('/contact')}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -227,6 +245,7 @@ const Home = () => {
                             </motion.button>
                             
                             <motion.button 
+                                onClick={() => navigate('/portfolio')}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
@@ -253,7 +272,7 @@ const Home = () => {
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Clear services that help your brand stand out.
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 mx-auto rounded-full"></div>
                     </motion.div>
 
                     <motion.div 
@@ -267,19 +286,19 @@ const Home = () => {
                             const IconComponent = service.icon;
                             const colorMap = {
                                 blue: "from-blue-500 to-blue-600",
-                                amber: "from-amber-500 to-amber-600",
+                                yellow: "from-yellow-500 to-yellow-600",
                                 emerald: "from-emerald-500 to-emerald-600",
                                 purple: "from-purple-500 to-purple-600"
                             };
                             const bgColorMap = {
                                 blue: "bg-blue-50",
-                                amber: "bg-amber-50",
+                                yellow: "bg-yellow-50",
                                 emerald: "bg-emerald-50",
                                 purple: "bg-purple-50"
                             };
                             const textColorMap = {
                                 blue: "text-blue-600",
-                                amber: "text-amber-600",
+                                yellow: "text-yellow-600",
                                 emerald: "text-emerald-600",
                                 purple: "text-purple-600"
                             };
@@ -296,9 +315,6 @@ const Home = () => {
                                     </div>
                                     <h3 className="text-xl font-bold mt-6 mb-3">{service.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{service.desc}</p>
-                                    <div className="mt-4 flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        Learn More <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                    </div>
                                 </motion.div>
                             );
                         })}
@@ -362,13 +378,13 @@ const Home = () => {
                         variants={fadeInUp}
                         className="text-center"
                     >
-                        <span className="inline-block px-4 py-2 bg-purple-100 text-purple-600 font-bold rounded-full text-sm tracking-wider">
+                        <span className="inline-block px-4 py-2 bg-yellow-100 text-yellow-600 font-bold rounded-full text-sm tracking-wider">
                             WHO WE SERVE
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Built for people who want to be trusted online.
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-green-500 mx-auto rounded-full"></div>
                     </motion.div>
 
                     <motion.div 
@@ -386,7 +402,7 @@ const Home = () => {
                                 emerald: "bg-emerald-50"
                             };
                             const textColorMap = {
-                                purple: "text-purple-600",
+                                purple: "text-yellow-600",
                                 blue: "text-blue-600",
                                 emerald: "text-emerald-600"
                             };
@@ -401,7 +417,7 @@ const Home = () => {
                                     <div className={`w-16 h-16 ${bgColorMap[item.color]} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                                         <IconComponent className={`text-3xl ${textColorMap[item.color]}`} />
                                     </div>
-                                    <h3 className="text-xl font-bold mt-4 mb-3 group-hover:text-purple-600 transition">{item.title}</h3>
+                                    <h3 className="text-xl font-bold mt-4 mb-3 group-hover:text-yellow-600 transition">{item.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                                 </motion.div>
                             );
@@ -463,7 +479,7 @@ const Home = () => {
                             const IconComponent = tier.icon;
                             const colorMap = {
                                 blue: "from-blue-500 to-blue-600",
-                                amber: "from-amber-500 to-amber-600",
+                                yellow: "from-yellow-500 to-yellow-600",
                                 emerald: "from-emerald-500 to-emerald-600",
                                 purple: "from-purple-500 to-purple-600",
                                 rose: "from-rose-500 to-rose-600",
@@ -472,7 +488,7 @@ const Home = () => {
                             };
                             const bgColorMap = {
                                 blue: "bg-blue-50",
-                                amber: "bg-amber-50",
+                                yellow: "bg-yellow-50",
                                 emerald: "bg-emerald-50",
                                 purple: "bg-purple-50",
                                 rose: "bg-rose-50",
@@ -481,7 +497,7 @@ const Home = () => {
                             };
                             const textColorMap = {
                                 blue: "text-blue-600",
-                                amber: "text-amber-600",
+                                yellow: "text-yellow-600",
                                 emerald: "text-emerald-600",
                                 purple: "text-purple-600",
                                 rose: "text-rose-600",
@@ -490,7 +506,7 @@ const Home = () => {
                             };
                             const borderMap = {
                                 blue: "border-blue-200",
-                                amber: "border-amber-200",
+                                yellow: "border-yellow-200",
                                 emerald: "border-emerald-200",
                                 purple: "border-purple-200",
                                 rose: "border-rose-200",
@@ -534,6 +550,7 @@ const Home = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
+                                        onClick={() =>  navigate('/contact')}
                                         className={`w-full py-3 bg-gradient-to-r ${colorMap[tier.color]} text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group`}
                                     >
                                         Get Started
@@ -616,6 +633,7 @@ const Home = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={() => navigate('/contact')}
                                 className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                             >
                                 <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />

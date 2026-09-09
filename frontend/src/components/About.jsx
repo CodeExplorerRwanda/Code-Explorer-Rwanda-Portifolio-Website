@@ -3,12 +3,16 @@ import {
     FaRocket, FaChartLine, FaArrowRight, FaEnvelope, FaQuoteLeft,
     FaCheckCircle, FaStar, FaTrophy, FaLightbulb, FaCrown,
     FaDatabase, FaMobile, FaServer, FaCode, FaPalette, FaCamera,
-    FaVideo, FaShare, FaGem
+    FaVideo, FaShare, FaGem,
+    FaGoodreads
 } from "react-icons/fa";
+import Founder from "../assets/DSC_0511.JPG";
+
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
-    // Animation variants
+    const navigate = useNavigate();
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -22,12 +26,11 @@ const About = () => {
         }
     };
 
-    // Core values from the images
     const coreValues = [
         { 
-            icon: FaShieldAlt,
-            title: "Legally Registered & Transparent",
-            desc: "We operate as a fully compliant corporate entity in Rwanda. Every project is backed by strict NDAs and transparent, itemized contracts.",
+            icon: FaGoodreads,
+            title: "Better Product & Transparent",
+            desc: "We create your app in modern and high security approach to provide useful, scalable, and accessible website to solve a real-world problems.",
             color: "blue"
         },
         { 
@@ -50,7 +53,6 @@ const About = () => {
         }
     ];
 
-    // Target clients from the images
     const targetClients = [
         {
             icon: FaBuilding,
@@ -78,41 +80,38 @@ const About = () => {
         }
     ];
 
-    // Testimonials from the images
     const testimonials = [
         {
-            quote: "We chose ByteFlow Ltd because they are a legally registered agency that offers clear, contract-backed timelines. Our corporate platform was deployed in exactly 12 days, and their local payment integration has processed millions in MoMo transactions flawlessly.",
-            author: "Kevin K.",
-            role: "Operations Director, ABT Group"
+            quote: "We chose Code Explorer Ltd because they are a best company that offers clear, contract-backed timelines. Our corporate platform was deployed in exactly 12 days, and their local payment integration has processed millions in MoMo transactions flawlessly.",
+            author: "Samuel N.",
+            role: "Teacher, GTSS"
         },
         {
-            quote: "Most agencies give vague promises, but ByteFlow provided a bulletproof technical blueprint. They merged our web architecture with premium high-end photography and commercial video assets. Their data transparency helped us scale our sales securely.",
-            author: "Jean U.",
-            role: "Managing Director, Luxury Apparel Boutique"
+            quote: "Most agencies give vague promises, but Code Explorer Rwanda provided a bulletproof technical blueprint. They merged our web architecture with premium high-end photography and commercial video assets. Their data transparency helped us scale our sales securely.",
+            author: "Sinai U.",
+            role: "CEO & FOunder, SAFI Linen Ltd"
         },
         {
-            quote: "ByteFlow built our custom web dashboard and automated management panel with real-time analytics. They didn't just hand over the code; they provided hands-on handoff training and 24/7 server protection that keeps us running smoothly.",
+            quote: "CodeExplorer built our custom web dashboard and automated management panel with real-time analytics. They didn't just hand over the code; they provided hands-on handoff training and 24/7 server protection that keeps us running smoothly.",
             author: "Pacey J.",
             role: "Co-Founder, Irena Tech Hub"
         },
         {
             quote: "Their combination of Digital Marketing and organic Google SEO indexing doubled our monthly qualified inquiries. They handled our local .RW domain registry and cloud emails transparently. They are easily the most reliable tech partners in Kigali.",
-            author: "Aline U.",
-            role: "Head of Growth, Professional Logistics Ltd"
+            author: "Nsengimana T.",
+            role: "CEO and Founder, SAF ltd"
         }
     ];
 
-    // Leadership team
     const leadership = {
-        name: "Umugwaneza Aline",
+        name: "NIYOMUGABO Etiene",
         title: "Founder & CEO",
-        description: "The establishment of ByteFlow Ltd was catalyzed by a vision to democratize premium tech and media infrastructure for businesses operating in Africa's rapidly growing digital economy.",
-        philosophy: "Under the leadership of Umugwaneza Aline, ByteFlow Ltd was built on the principle of continuous digital iteration — the 'Flow.' The team operates on an ecosystem architecture where local companies receive contract-backed, milestone-driven support, helping founders maintain market dominance effortlessly."
+        description: "The establishment of Code Explorer Rwanda Ltd was catalyzed by a vision to democratize premium tech and media infrastructure for businesses operating in Africa's rapidly growing digital economy.",
+        philosophy: "Under the leadership of Niyomugabo Etiene, Code Explorer Rwanda Ltd was built on the principle of continuous digital iteration — the 'Rwanda.' The team operates on an ecosystem architecture where local companies receive contract-backed, milestone-driven support, helping founders maintain market dominance effortlessly."
     };
 
-    // Stats
     const stats = [
-        { number: "50+", label: "Projects Delivered" },
+        { number: "5+", label: "Projects Delivered" },
         { number: "12", label: "Average Days to Launch" },
         { number: "24/7", label: "Technical Support" },
         { number: "100%", label: "Client Satisfaction" }
@@ -120,7 +119,6 @@ const About = () => {
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
-            {/* Hero Section */}
             <section className="relative min-h-[60vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -145,20 +143,22 @@ const About = () => {
                         </h1>
                         
                         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl">
-                            ByteFlow Ltd is Kigali's premier digital technology agency. We engineer high-performance websites, premium brand identities, and custom business automation tools that accelerate growth and build unshakeable market credibility.
+                            Code Explporer Rwanda Ltd is Kigali's premier digital technology agency. We engineer high-performance websites, premium brand identities, and custom business automation tools that accelerate growth and build unshakeable market credibility.
                         </p>
                         
                         <div className="mt-10 flex flex-wrap gap-4">
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
+                                onClick={() => navigate('/contact')}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                             >
-                                Talk to ByteFlow
+                                Talk to Code Explorer Rwanda
                             </motion.button>
                             
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
+                                onClick={() => navigate('/solution')}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
                             >
@@ -169,7 +169,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Core Values Section */}
             <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -180,7 +179,7 @@ const About = () => {
                         className="text-center"
                     >
                         <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 font-bold rounded-full text-sm tracking-wider">
-                            WHY CHOOSE BYTEFLOW
+                            WHY CHOOSE CODE EXPLORER
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             What makes us your trusted tech partner?
@@ -232,7 +231,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* About Philosophy Section */}
             <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -250,8 +248,8 @@ const About = () => {
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">Meet the Leadership Team</h2>
                         
                         <div className="flex items-start space-x-6 mb-6">
-                            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
-                                UA
+                            <div className="w-20 h-20 rounded-full bg-gradient-to-r flex items-center justify-center font-bold flex-shrink-0">
+                                <img src={Founder} className="object-cover w-full h-full rounded-full"/>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">{leadership.name}</h3>
@@ -272,7 +270,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Stats Section */}
             <section className="py-16 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -298,7 +295,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Target Clients Section */}
             <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -316,7 +312,7 @@ const About = () => {
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            ByteFlow works with SMEs, corporate teams, creative agencies, non-profits, and professional service providers that need digital products built to convert.
+                            Code Explorer Rwanda works with SMEs, corporate teams, creative agencies, non-profits, and professional service providers that need digital products built to convert.
                         </p>
                     </motion.div>
 
@@ -361,7 +357,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
             <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -379,7 +374,7 @@ const About = () => {
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            Real business results from local companies built on ByteFlow's digital infrastructure.
+                            Real business results from local companies built on Code Explorer's digital infrastructure.
                         </p>
                     </motion.div>
 
@@ -411,7 +406,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -422,23 +416,23 @@ const About = () => {
                         className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
-                        
                         <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
                             <div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-white">
                                     Ready to update your digital presence?
                                 </h2>
                                 <p className="mt-3 text-lg text-blue-100 max-w-2xl leading-relaxed">
-                                    Talk with the ByteFlow team to build a professional website, complete brand identity, or secure cloud hosting package.
+                                    Talk with the Code Explorer team to build a professional website, complete brand identity, or secure cloud hosting package.
                                 </p>
                             </div>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={() => navigate("contact")}
                                 className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                             >
                                 <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />
-                                Contact ByteFlow
+                                Contact Code Explorer Rwanda
                             </motion.button>
                         </div>
                     </motion.div>

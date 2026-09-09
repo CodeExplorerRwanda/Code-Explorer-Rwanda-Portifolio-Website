@@ -9,12 +9,13 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Solution = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate();
 
-    // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -28,13 +29,12 @@ const Solution = () => {
         }
     };
 
-    // Detailed services data
     const services = [
         {
             id: "web-development",
             icon: FaCode,
             title: "Website Development",
-            price: "220,000 RWF",
+            price: "250,000 RWF",
             description: "We build clean and professional websites for your business. We make sure your site looks beautiful on mobile phones and computers so you can get more clients.",
             fullDescription: "We build clean and professional websites for your business. We make sure your site looks beautiful on mobile phones and computers so you can get more clients. From landing pages to complex web applications, we deliver solutions that drive results.",
             features: [
@@ -52,7 +52,7 @@ const Solution = () => {
             id: "graphic-design",
             icon: FaPalette,
             title: "Graphic Design",
-            price: "90,000 RWF",
+            price: "80,000 RWF",
             description: "Professional logos, branded visuals, and print materials that make your business look polished and trustworthy.",
             fullDescription: "Professional logos, branded visuals, and print materials that make your business look polished and trustworthy. We create visual identities that capture your brand's essence and resonate with your target audience.",
             features: [
@@ -92,7 +92,7 @@ const Solution = () => {
             description: "Professional domain registration for your business with easy management and renewal options.",
             fullDescription: "Professional domain registration for your business with easy management and renewal options. Get your perfect .rw domain or any other TLD with our hassle-free registration service.",
             features: [
-                ".RW Domain Registration",
+                ".RW, .com, .org Domain Registration",
                 "Domain Management",
                 "Email Setup",
                 "DNS Management"
@@ -106,7 +106,7 @@ const Solution = () => {
             id: "digital-marketing",
             icon: FaShare,
             title: "Digital Marketing & SEO",
-            price: "110,000 RWF",
+            price: "250,000 RWF",
             description: "SEO optimization, content strategy, and targeted ads to expand your online reach and attract more customers.",
             fullDescription: "SEO optimization, content strategy, and targeted ads to expand your online reach and attract more customers. We help you rank higher on Google and convert visitors into loyal customers.",
             features: [
@@ -142,7 +142,7 @@ const Solution = () => {
             id: "photography",
             icon: FaCamera,
             title: "Photography",
-            price: "120,000 RWF",
+            price: "10,000 RWF",
             description: "Professional photography services including product photos, corporate portraits, and event coverage.",
             fullDescription: "Professional photography services including product photos, corporate portraits, and event coverage. We capture stunning images that showcase your products, people, and brand in the best light.",
             features: [
@@ -160,7 +160,7 @@ const Solution = () => {
             id: "documentation",
             icon: FaBook,
             title: "Office & Documentation",
-            price: "70,000 RWF",
+            price: "50,000 RWF",
             description: "Professional business documents, reports, and formal materials that help your company look organized.",
             fullDescription: "Professional business documents, reports, and formal materials that help your company look organized. From business profiles to proposal designs, we ensure your documentation reflects professionalism.",
             features: [
@@ -204,7 +204,6 @@ const Solution = () => {
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
-            {/* Hero Section */}
             <section className="relative min-h-[50vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -235,6 +234,7 @@ const Solution = () => {
                         <div className="mt-10 flex flex-wrap gap-4">
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
+                                onClick={() => navigate('/portfolio')}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                             >
@@ -242,18 +242,18 @@ const Solution = () => {
                             </motion.button>
                             
                             <motion.button 
+                                onClick={() => navigate('/contact')}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
                             >
-                                Talk to ByteFlow
+                                Talk to Code Explorer
                             </motion.button>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Services Grid */}
             <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -320,7 +320,6 @@ const Solution = () => {
                 </div>
             </section>
 
-            {/* Service Detail Modal */}
             <AnimatePresence>
                 {isModalOpen && selectedService && (
                     <motion.div
@@ -339,7 +338,6 @@ const Solution = () => {
                         >
                             {selectedService && (
                                 <div className="p-8 md:p-10">
-                                    {/* Header */}
                                     <div className="flex items-start justify-between mb-6">
                                         <div className="flex items-center space-x-4">
                                             <div className={`w-16 h-16 ${getColorClasses(selectedService.color).bg} rounded-2xl flex items-center justify-center`}>
@@ -358,13 +356,11 @@ const Solution = () => {
                                         </button>
                                     </div>
 
-                                    {/* Delivery Time Badge */}
                                     <div className={`inline-flex items-center px-4 py-2 ${getColorClasses(selectedService.color).bg} ${getColorClasses(selectedService.color).text} rounded-full text-sm font-bold mb-6`}>
                                         <FaClock className="mr-2" />
                                         Delivery in {selectedService.deliveryTime}
                                     </div>
 
-                                    {/* Full Description */}
                                     <div className="mb-6">
                                         <h4 className="text-lg font-bold mb-2">What We Do</h4>
                                         <p className="text-gray-600 leading-relaxed">
@@ -372,7 +368,6 @@ const Solution = () => {
                                         </p>
                                     </div>
 
-                                    {/* Features */}
                                     <div className="mb-6">
                                         <h4 className="text-lg font-bold mb-3">What We Do Exactly:</h4>
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -385,7 +380,6 @@ const Solution = () => {
                                         </ul>
                                     </div>
 
-                                    {/* Tools */}
                                     <div className="mb-8">
                                         <h4 className="text-lg font-bold mb-3">Tools & Technologies Used:</h4>
                                         <div className="flex flex-wrap gap-3">
@@ -397,7 +391,6 @@ const Solution = () => {
                                         </div>
                                     </div>
 
-                                    {/* Order Button */}
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <motion.button
                                             whileHover={{ scale: 1.03 }}
@@ -424,7 +417,6 @@ const Solution = () => {
                 )}
             </AnimatePresence>
 
-            {/* How to Order Section */}
             <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -515,7 +507,6 @@ const Solution = () => {
                 </div>
             </section>
 
-            {/* Execution Model Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -525,13 +516,13 @@ const Solution = () => {
                         variants={fadeInUp}
                         className="text-center mb-16"
                     >
-                        <span className="inline-block px-4 py-2 bg-purple-100 text-purple-600 font-bold rounded-full text-sm tracking-wider">
+                        <span className="inline-block px-4 py-2 bg-yellow-100 text-yellow-600 font-bold rounded-full text-sm tracking-wider">
                             EXECUTION MODEL
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Our Guaranteed 1-Week Delivery Pipeline
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-green-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             We respect your corporate timelines. From the moment you place an order to full production hand-off, we execute inside a fixed 7-day milestone architecture.
                         </p>
@@ -564,13 +555,13 @@ const Solution = () => {
                             <motion.div
                                 key={index}
                                 variants={fadeInUp}
-                                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500 group hover:-translate-x-1"
+                                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-yellow-500 group hover:-translate-x-1"
                             >
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-purple-600">
+                                    <h3 className="text-2xl font-bold text-yellow-600">
                                         {step.title}
                                     </h3>
-                                    <span className="text-sm font-bold bg-purple-100 text-purple-600 px-4 py-2 rounded-full">
+                                    <span className="text-sm font-bold bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full">
                                         {step.day}
                                     </span>
                                 </div>
@@ -586,7 +577,7 @@ const Solution = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="mt-12 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200"
+                        className="mt-12 bg-gradient-to-r from-yellow-50 to-green-50 rounded-2xl p-8 border border-yellow-200"
                     >
                         <h3 className="text-xl font-bold text-gray-800 mb-3">
                             Have a Special Requirement?
@@ -597,7 +588,7 @@ const Solution = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="px-6 py-3 bg-gradient-to-r from-yellow-500 to-green-500 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                         >
                             Schedule a Consultation
                         </motion.button>
@@ -605,7 +596,6 @@ const Solution = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -629,10 +619,11 @@ const Solution = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={() => navigate('/contact')}
                                 className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                             >
                                 <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />
-                                Talk to ByteFlow
+                                Talk to Code Explorer
                             </motion.button>
                         </div>
                     </motion.div>

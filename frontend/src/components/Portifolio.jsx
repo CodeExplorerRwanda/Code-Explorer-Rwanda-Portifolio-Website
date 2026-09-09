@@ -5,9 +5,10 @@ import {
     FaUsers, FaGlobe, FaCrown, FaTrophy, FaGem, FaFire
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
-    // Animation variants
+    const navigate = useNavigate()
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -21,139 +22,136 @@ const Portfolio = () => {
         }
     };
 
-    // Portfolio projects from images
     const projects = [
         {
             category: "Web Development",
-            title: "Aline Personal Portfolio",
+            title: "Niyomugabo Personal Portfolio",
             description: "A modern personal portfolio built with React, showcasing projects, skills, and achievements for creative professionals.",
-            tech: ["React", "Framer Motion", "CSS Vanilla"],
-            link: "#",
+            tech: ["React", "Framer Motion", "Tailwind css", "Node js"],
+            link: "https://niyomugaboetiene.vercel.app",
             color: "blue"
         },
         {
-            category: "Web Development",
-            title: "ABT Hub",
-            description: "A modern platform for A Better Tomorrow Foundation Hub that helps members access resources and community support.",
+            category: "E-commerce",
+            title: "Shop Sphere",
+            description: "A modern platform for Ecommerce shop help them to buy, sell goods and service, and community support.",
             tech: ["React", "Node.js", "MongoDB", "Javascript", "Express.js"],
             link: "#",
             color: "amber"
         },
         {
             category: "E-commerce",
-            title: "U & J Shop",
-            description: "A premium fashion e-commerce platform delivering elite boutique apparel and accessories with seamless checkout.",
-            tech: ["React", "Stripe", "Next.js", "Javascript", "Firebase"],
+            title: "HomeFinder app",
+            description: "A premium home e-commerce platform delivering better home for lent and sell with seamless checkout.",
+            tech: ["React", "Node.js", "MongoDB", "Javascript", "Express.js"],
             link: "#",
             color: "emerald"
         },
         {
             category: "Web Development",
-            title: "Imena Move Kids",
-            description: "A dance management platform for Imena Moves Kidz featuring full member management and event coordination.",
+            title: "Net Moviess",
+            description: "A movie management platform for NET featuring full movie watching with better performance and accessibility.",
             tech: ["Framer", "MongoDB", "React", "Express.js", "Node.js", "Tailwind CSS"],
             link: "#",
             color: "purple"
         },
         {
-            category: "Web Development",
-            title: "Nexus News Network",
-            description: "A modern digital news platform that delivers timely, high-quality journalism with real-time updates.",
-            tech: ["React", "Node.js & Express", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
+            category: "AI-based App",
+            title: "Face recognation app",
+            description: "A modern digital AI platform that recognize images and provide the details of the images in real-time.",
+            tech: ["React", "Python & Flask", "Jupyter notebook", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
             link: "#",
             color: "rose"
         },
         {
-            category: "Web Development",
-            title: "A Better Solution",
-            description: "A modern and premium digital agency website engineered for tech innovation and business growth.",
-            tech: ["React", "Node.js & Express", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
+            category: "AI-based App",
+            title: "House Price Prediction app",
+            description: "A modern and free digital agency website engineered for Predicting house price in real time.",
+            tech: ["React", "Python & Flask", "Jupyter notebook", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
             link: "#",
             color: "indigo"
         },
         {
-            category: "Web Development",
-            title: "A Better Tomorrow Foundation",
-            description: "The ABT Foundation web platform serves as a digital portal for community outreach and social impact initiatives.",
-            tech: ["React", "MySQL", "CSS Vanilla", "Javascript"],
+            category: "AI-Based App",
+            title: "Rwanda Creditit Denial Predictor",
+            description: "The RCDP is web platform serves predict if Rwandan house hold will get the goverment crediti or not based on their features.",
+            tech: ["React", "Python & Flask", "Jupyter notebook", "MySQL & mysql2", "JWT", "Cloudinary", "Multer"],
             link: "#",
             color: "cyan"
         },
         {
-            category: "Web Development",
-            title: "Citizen Complaint",
-            description: "A modern, responsive digital governance system for citizen engagement and complaint management.",
-            tech: ["React", "Node.js", "MongoDB", "Express.js"],
+            category: "Mobile App",
+            title: "Task Remainder",
+            description: "A modern, mobile digital governance system for you that will remind you the task you have to do.",
+            tech: ["React-native", "Node.js", "MongoDB", "Express.js"],
             link: "#",
             color: "teal"
         },
         {
-            category: "Web Development",
-            title: "IntabweFlow",
-            description: "A productivity dashboard built with React and Vite, helping users manage tasks and track progress efficiently.",
+            category: "E-commerce",
+            title: "SAF Ltd",
+            description: "A modern Ecommerce dashboard built with React and Vite, helping SAF company to manage, sell their animals, track changes efficiently and customer buys animals in easy way.",
             tech: ["TypeScript", "Node.js", "React", "Vite"],
             link: "#",
             color: "blue"
         },
         {
-            category: "Web Development",
-            title: "Voice Empowered",
-            description: "A premium spiritual growth platform and knowledge hub founded to inspire and empower communities.",
-            tech: ["React", "Typescript", "Tailwind CSS"],
+            category: "E-commerce",
+            title: "SAFI Linen ltd",
+            description: "A modern Ecommerce dashboard built with React and Vite, helping SAFI Linen company to manage, sell their products, track changes efficiently and customer buys their products in easy way.",
+            tech: ["Next js", "Typescript", "Tailwind CSS", "Amazon dynamo DB"],
             link: "#",
             color: "amber"
         },
         {
-            category: "Web Development",
-            title: "Personal Banking",
-            description: "A modern React web app for managing digital savings, transactions, and financial planning.",
-            tech: ["TypeScript", "Node.js", "React", "Express"],
+            category: "Decentralized Development",
+            title: "Krypto Site",
+            description: "A modern Decentralized web app for sending and receiving crypto (ex: ETH, BTC).",
+            tech: ["TypeScript", "Ethers.js", "Solidity", "tailwindcss", "Web3.js"],
             link: "#",
             color: "emerald"
         },
         {
             category: "Web Development",
-            title: "NovaPay System",
-            description: "A premier digital banking ecosystem designed for the modern Rwandan economy and financial inclusion.",
-            tech: ["React", "Node.js & Express", "MongoDB & Mongoose"],
+            title: "GTSS Chat",
+            description: "A modern chat app designed for communicating the Gikonko tss leaders and the parents and sharing message between them.",
+            tech: ["React", "Node.js & Express", "MongoDB & Mongoose", "tailwindcss", "socket.io"],
             link: "#",
             color: "purple"
         },
         {
             category: "Web Development",
-            title: "Accountant System",
-            description: "AccPro is a professional, high-density financial suite designed for modern Rwandan accounting firms.",
-            tech: ["React", "MySQL", "Node.js"],
+            title: "GTTI COMPANY Ltd",
+            description: "GTTI is a professional, high-density company suite designed for modern Rwandan selling platform.",
+            tech: ["React", "MySQL", "Node.js", "tailwindcss"],
             link: "#",
             color: "rose"
         },
         {
             category: "Web Development",
-            title: "DevPulse",
-            description: "An enterprise-grade agile project management dashboard built with React and modern web technologies.",
-            tech: ["React", "Vanilla CSS", "Node.js"],
+            title: "SHIRINYOTA Company Ltd",
+            description: "A modern project management dashboard built with React and modern web technologies that help SHIRINYOTA Company to sell their drinking products.",
+            tech: ["React", "Vanilla CSS", "Node.js", "MongoDB"],
             link: "#",
             color: "indigo"
         },
         {
             category: "Web Development",
-            title: "Precision Accounting",
-            description: "Say goodbye to manual entry. Join thousands of financial experts using our best tools, templates, and insights.",
+            title: "Ecole Primaire Sainte Anne",
+            description: "Say goodbye to manual entry. Join thousands of schools experts using our best tools, templates, and insights.",
             tech: ["TypeScript", "Node.js", "React", "MySQL"],
             link: "#",
             color: "teal"
         }
     ];
 
-    // Stats from images
     const stats = [
-        { number: "850+", label: "Projects Completed" },
-        { number: "24+", label: "Enterprise Clients" },
-        { number: "15", label: "Industry Awards" },
+        { number: "80+", label: "Projects Completed" },
+        { number: "5+", label: "Enterprise Clients" },
+        { number: "0", label: "Industry Awards" },
         { number: "98%", label: "Client Retention Rate" }
     ];
 
-    // Featured projects (highlighted ones)
     const featuredProjects = [
         {
             title: "Nurturing the Elite Performers of Tomorrow",
@@ -185,7 +183,6 @@ const Portfolio = () => {
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
-            {/* Hero Section */}
             <section className="relative min-h-[50vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -217,24 +214,16 @@ const Portfolio = () => {
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-                            >
-                                View All Projects
-                            </motion.button>
-                            
-                            <motion.button 
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
+                                onClick={() => navigate('/contact')}
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
                             >
-                                Talk to ByteFlow
+                                Talk to Code Explorer
                             </motion.button>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Stats Section */}
             <section className="py-16 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -260,7 +249,6 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* Featured Projects Section */}
             <section className="py-16 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -293,7 +281,6 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* Projects Grid */}
             <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -382,7 +369,6 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -405,11 +391,12 @@ const Portfolio = () => {
                             </div>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
+                                onClick={() => navigate('/contact')}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                             >
                                 <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />
-                                Contact ByteFlow
+                                Contact Code Explorer
                             </motion.button>
                         </div>
                     </motion.div>

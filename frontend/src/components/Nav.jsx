@@ -10,7 +10,6 @@ const Nav = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-3">
-                {/* Logo Section */}
                 <div className="flex items-center group cursor-pointer">
                     <img 
                         src={logo}  
@@ -20,7 +19,7 @@ const Nav = () => {
                     <div className="ms-3">
                         <h1 className="text-2xl font-bold tracking-tight">
                             <span className="text-blue-600 hover:text-blue-700 transition-colors">Code</span>
-                            <span className="text-amber-500 hover:text-amber-600 transition-colors">Explorer</span>
+                            <span className="text-yellow-500 hover:text-yyellow-600 transition-colors">Explorer</span>
                             <span className="text-emerald-600 hover:text-emerald-700 transition-colors">Rwanda</span>
                             <span className="text-gray-600"> Ltd</span>
                         </h1>
@@ -28,7 +27,6 @@ const Nav = () => {
                     </div>
                 </div>
 
-                {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center space-x-1">
                     <Link 
                         to="/" 
@@ -39,7 +37,7 @@ const Nav = () => {
                     </Link>
                     
                     <Link 
-                        to="/services" 
+                        to="/solution" 
                         className="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 group"
                     >
                         <FaServicestack className="me-2 text-lg group-hover:scale-110 transition-transform" />
@@ -63,7 +61,7 @@ const Nav = () => {
                     </Link>
                     
                     <Link 
-                        to="/blog" 
+                        to="/insights" 
                         className="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 group"
                     >
                         <FaNewspaper className="me-2 text-lg group-hover:scale-110 transition-transform" />
