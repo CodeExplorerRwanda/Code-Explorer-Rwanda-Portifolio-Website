@@ -29,16 +29,15 @@ const NotFound = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center"
                 >
-                    {/* 404 Illustration */}
                     <div className="relative inline-block mb-8">
-                        <div className="text-8xl sm:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-amber-500 to-emerald-500">
+                        <div className="text-8xl sm:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-yellow-500 to-emerald-500">
                             404
                         </div>
                         <div className="absolute -top-4 -right-4 animate-bounce">
                             <FaCompass className="text-4xl text-blue-400 opacity-50" />
                         </div>
                         <div className="absolute -bottom-4 -left-4 animate-bounce delay-100">
-                            <FaFrown className="text-4xl text-amber-400 opacity-50" />
+                            <FaFrown className="text-4xl text-yellow-400 opacity-50" />
                         </div>
                     </div>
 
@@ -50,21 +49,6 @@ const NotFound = () => {
                         The page you're looking for seems to have wandered off. Don't worry, we'll help you find your way back.
                     </p>
 
-                    {/* Search Bar */}
-                    <div className="max-w-md mx-auto mt-8">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Search our site..."
-                                className="w-full px-6 py-4 pr-14 bg-white border border-gray-200 rounded-full focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition shadow-lg hover:shadow-xl"
-                            />
-                            <button className="absolute right-2 top-2 p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white hover:scale-105 transition-transform duration-300">
-                                <FaSearch className="text-lg" />
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Quick Navigation Links */}
                     <div className="mt-10">
                         <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
                             Quick Navigation
@@ -82,7 +66,6 @@ const NotFound = () => {
                         </div>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="mt-10 flex flex-wrap justify-center gap-4">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
@@ -107,7 +90,6 @@ const NotFound = () => {
                         </motion.button>
                     </div>
 
-                    {/* Helpful Suggestions */}
                     <div className="mt-16 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
                         <div className="flex items-start space-x-3">
                             <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
@@ -121,10 +103,6 @@ const NotFound = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="mt-12 text-sm text-gray-400">
-                        © {new Date().getFullYear()} ByteFlow Ltd. All rights reserved.
                     </div>
                 </motion.div>
             </div>

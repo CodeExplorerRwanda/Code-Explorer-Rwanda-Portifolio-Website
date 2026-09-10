@@ -79,7 +79,7 @@ const Nav = () => {
 
                 <div className="hidden lg:block">
                     <Link 
-                        to="/get-started" 
+                        to="/contact" 
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out"
                     >
                         Launch Project

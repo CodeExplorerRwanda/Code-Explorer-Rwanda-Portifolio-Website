@@ -12,8 +12,6 @@ const Footer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle newsletter subscription
-        console.log('Newsletter subscription:', email);
         setEmail('');
     };
 
@@ -32,7 +30,6 @@ const Footer = () => {
 
     return (
         <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
-            {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
                 <motion.div 
                     variants={staggerContainer}
@@ -41,16 +38,15 @@ const Footer = () => {
                     viewport={{ once: true }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
                 >
-                    {/* Brand Section */}
                     <motion.div variants={fadeInUp} className="space-y-4">
                         <div className="flex items-center">
-                            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">B</span>
+                            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <span className="text-white font-bold text-xl">C</span>
                             </div>
                             <div className="ml-3">
                                 <h2 className="text-2xl font-bold">
-                                    <span className="text-blue-400">Byte</span>
-                                    <span className="text-amber-400">Flow</span>
+                                    <span className="text-blue-400">Code</span>
+                                    <span className="text-yellow-400">Explorer</span>
                                     <span className="text-gray-400"> Ltd</span>
                                 </h2>
                                 <p className="text-gray-400 text-sm">ENGINEERING DIGITAL SUCCESS</p>
@@ -78,11 +74,10 @@ const Footer = () => {
                         </div>
                     </motion.div>
 
-                    {/* Explore Section */}
                     <motion.div variants={fadeInUp}>
                         <h3 className="text-lg font-bold mb-4 text-white relative">
                             EXPLORE
-                            <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mt-1"></span>
+                            <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-green-500 mt-1"></span>
                         </h3>
                         <ul className="space-y-3 pt-3">
                             <li>
@@ -118,47 +113,45 @@ const Footer = () => {
                         </ul>
                     </motion.div>
 
-                    {/* Services Section */}
                     <motion.div variants={fadeInUp}>
                         <h3 className="text-lg font-bold mb-4 text-white relative">
                             SERVICES
-                            <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-amber-500 to-orange-500 mt-1"></span>
+                            <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 mt-1"></span>
                         </h3>
                         <ul className="space-y-3 pt-3">
                             <li>
                                 <Link to="/services#web-development" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Web Development
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/services#graphic-design" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Brand Design
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/services#digital-marketing" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Digital Marketing
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/services#web-hosting" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Support & Maintenance
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/services#photography" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Photography & Video
                                 </Link>
                             </li>
                         </ul>
                     </motion.div>
 
-                    {/* Contact & Newsletter Section */}
                     <motion.div variants={fadeInUp}>
                         <h3 className="text-lg font-bold mb-4 text-white relative">
                             CONTACT
@@ -167,19 +160,18 @@ const Footer = () => {
                         <ul className="space-y-3 pt-3">
                             <li className="flex items-start text-gray-400 hover:text-white transition-colors duration-300">
                                 <FaMapMarkerAlt className="text-emerald-400 mt-1 mr-3 flex-shrink-0" />
-                                <span>Gasabo, Kigali, Rwanda</span>
+                                <span>Nyamata, Bugesera, Rwanda</span>
                             </li>
                             <li className="flex items-center text-gray-400 hover:text-white transition-colors duration-300">
                                 <FaPhone className="text-emerald-400 mr-3 flex-shrink-0" />
-                                <a href="tel:+250796023452" className="hover:text-white transition-colors">+250 796 023 452</a>
+                                <a href="tel:+250796023452" className="hover:text-white transition-colors">+250 728 184 299</a>
                             </li>
                             <li className="flex items-center text-gray-400 hover:text-white transition-colors duration-300">
                                 <FaEnvelope className="text-emerald-400 mr-3 flex-shrink-0" />
-                                <a href="mailto:byteflowltd9@gmail.com" className="hover:text-white transition-colors">byteflowltd9@gmail.com</a>
+                                <a href="mailto:codeexplorerrwanda@gmail.com" className="hover:text-white transition-colors">codeexplorerrwanda@gmail.com</a>
                             </li>
                         </ul>
 
-                        {/* Newsletter */}
                         <div className="mt-6">
                             <h4 className="text-sm font-bold text-gray-300 mb-2">NEWSLETTER</h4>
                             <p className="text-gray-400 text-sm leading-relaxed mb-3">
@@ -196,26 +188,24 @@ const Footer = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="absolute right-1 top-1 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-medium hover:scale-105 transition-transform duration-300"
+                                    className="absolute right-1 top-1 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-green-600 rounded-lg text-white font-medium hover:scale-105 transition-transform duration-300"
                                 >
                                     <FaArrowRight />
                                 </button>
                             </form>
                         </div>
 
-                        {/* Talk to ByteFlow Button */}
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                            className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-green-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
                         >
                             <FaRocket className="mr-2" />
-                            Talk to ByteFlow!
+                            Talk to Code Explorer!
                         </motion.button>
                     </motion.div>
                 </motion.div>
 
-                {/* Bottom Bar */}
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -225,10 +215,10 @@ const Footer = () => {
                 >
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className="text-gray-500 text-sm">
-                            © {new Date().getFullYear()} ByteFlow Ltd. All rights reserved.
+                            © {new Date().getFullYear()} Code Explorer Ltd. All rights reserved.
                         </p>
                         <div className="flex space-x-6 text-sm">
-                            <Link to="/privacy" className="text-gray-500 hover:text-gray-300 transition-colors duration-300">
+                            <Link to="/privancy" className="text-gray-500 hover:text-gray-300 transition-colors duration-300">
                                 Privacy Policy
                             </Link>
                             <span className="text-gray-700">|</span>

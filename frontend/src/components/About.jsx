@@ -37,7 +37,7 @@ const About = () => {
             icon: FaClock,
             title: "Guaranteed Milestone Timelines",
             desc: "We eliminate vague delivery windows. Corporate websites completed within 7-14 days, custom database apps deployed within 21 days.",
-            color: "amber"
+            color: "yellow"
         },
         { 
             icon: FaHandshake,
@@ -64,7 +64,7 @@ const About = () => {
             icon: FaUsers,
             title: "Corporate Teams",
             desc: "Secure hosting, internal dashboards, and polished brand communications for companies scaling operations.",
-            color: "amber"
+            color: "yellow"
         },
         {
             icon: FaPalette,
@@ -137,7 +137,7 @@ const About = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                             Engineering Digital Success
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 for Rwandan Businesses
                             </span>
                         </h1>
@@ -184,7 +184,7 @@ const About = () => {
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             What makes us your trusted tech partner?
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             We eliminate delivery risk. Here are the core parameters local business leaders evaluate before signing a contract with us.
                         </p>
@@ -201,13 +201,13 @@ const About = () => {
                             const IconComponent = value.icon;
                             const bgColorMap = {
                                 blue: "bg-blue-50",
-                                amber: "bg-amber-50",
+                                yellow: "bg-yellow-50",
                                 emerald: "bg-emerald-50",
                                 purple: "bg-purple-50"
                             };
                             const textColorMap = {
                                 blue: "text-blue-600",
-                                amber: "text-amber-600",
+                                yellow: "text-yellow-600",
                                 emerald: "text-emerald-600",
                                 purple: "text-purple-600"
                             };
@@ -241,8 +241,8 @@ const About = () => {
                         className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100"
                     >
                         <div className="flex items-center mb-6">
-                            <FaCrown className="text-amber-500 text-3xl mr-4" />
-                            <span className="text-sm font-bold text-amber-500 tracking-wider">LEADERSHIP & STRATEGY</span>
+                            <FaCrown className="text-yellow-500 text-3xl mr-4" />
+                            <span className="text-sm font-bold text-yellow-500 tracking-wider">LEADERSHIP & STRATEGY</span>
                         </div>
                         
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">Meet the Leadership Team</h2>
@@ -327,13 +327,13 @@ const About = () => {
                             const IconComponent = client.icon;
                             const bgColorMap = {
                                 blue: "bg-blue-50",
-                                amber: "bg-amber-50",
+                                yellow: "bg-yellow-50",
                                 emerald: "bg-emerald-50",
                                 purple: "bg-purple-50"
                             };
                             const textColorMap = {
                                 blue: "text-blue-600",
-                                amber: "text-amber-600",
+                                yellow: "text-yellow-600",
                                 emerald: "text-emerald-600",
                                 purple: "text-purple-600"
                             };

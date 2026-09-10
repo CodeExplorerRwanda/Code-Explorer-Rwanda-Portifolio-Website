@@ -49,7 +49,6 @@ const PrivacyPolicy = () => {
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50 min-h-screen">
-            {/* Hero Section */}
             <section className="relative min-h-[40vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -68,7 +67,7 @@ const PrivacyPolicy = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             Privacy Policy
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 Your Data, Protected
                             </span>
                         </h1>
@@ -84,7 +83,6 @@ const PrivacyPolicy = () => {
                 </div>
             </section>
 
-            {/* Content Section */}
             <section className="py-20 px-4">
                 <div className="max-w-4xl mx-auto">
                     <motion.div 
@@ -94,15 +92,13 @@ const PrivacyPolicy = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        {/* Introduction */}
                         <motion.div variants={fadeInUp} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                             <h2 className="text-2xl font-bold mb-4 text-gray-800">Introduction</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                ByteFlow Ltd ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our views and practices regarding your personal data.
+                                Code Explorer Rwanda Ltd ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our views and practices regarding your personal data.
                             </p>
                         </motion.div>
 
-                        {/* Main Sections */}
                         {sections.map((section, index) => {
                             const IconComponent = section.icon;
                             return (
@@ -128,23 +124,21 @@ const PrivacyPolicy = () => {
                             );
                         })}
 
-                        {/* Contact Section */}
                         <motion.div variants={fadeInUp} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
                             <h3 className="text-xl font-bold mb-3 text-gray-800">Contact Us</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">
                                 If you have any questions about this Privacy Policy, please contact us:
                             </p>
                             <div className="space-y-2 text-gray-600">
-                                <p><span className="font-medium">Email:</span> byteflowltd9@gmail.com</p>
-                                <p><span className="font-medium">Phone:</span> +250 796 023 452</p>
-                                <p><span className="font-medium">Address:</span> Gasabo, Kigali, Rwanda</p>
+                                <p><span className="font-medium">Email:</span> codeexplorerrwanda@gmail.com</p>
+                                <p><span className="font-medium">Phone:</span> +250 728 184 299</p>
+                                <p><span className="font-medium">Address:</span> Nyamata, Bugesera, Rwanda</p>
                             </div>
                         </motion.div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 

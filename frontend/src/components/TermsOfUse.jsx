@@ -26,11 +26,6 @@ const TermsOfService = () => {
             content: "By using our website and services, you agree to comply with and be bound by these Terms of Service. If you do not agree with any part of these terms, you may not use our services."
         },
         {
-            icon: FaUserCheck,
-            title: "User Accounts",
-            content: "To access certain features of our services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
-        },
-        {
             icon: FaCreditCard,
             title: "Payments and Billing",
             content: "We offer various service tiers with transparent pricing. All payments are processed securely. You agree to pay all charges associated with your selected services in accordance with the applicable pricing terms."
@@ -38,7 +33,7 @@ const TermsOfService = () => {
         {
             icon: FaShieldAlt,
             title: "Intellectual Property",
-            content: "All content, trademarks, logos, and intellectual property displayed on our website are the property of ByteFlow Ltd. You may not reproduce, distribute, or create derivative works without our express written consent."
+            content: "All content, trademarks, logos, and intellectual property displayed on our website are the property of Code Explorer Rwanda Ltd. You may not reproduce, distribute, or create derivative works without our express written consent."
         },
         {
             icon: FaBan,
@@ -68,7 +63,7 @@ const TermsOfService = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             Terms of Service
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 Know Your Rights
                             </span>
                         </h1>
@@ -98,7 +93,7 @@ const TermsOfService = () => {
                         <motion.div variants={fadeInUp} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                             <h2 className="text-2xl font-bold mb-4 text-gray-800">Introduction</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                These Terms of Service ("Terms") govern your use of ByteFlow Ltd's website and services. By accessing or using our services, you agree to be bound by these Terms. Please read them carefully before using our services.
+                                These Terms of Service ("Terms") govern your use of Code Explorer Rwanda Ltd's website and services. By accessing or using our services, you agree to be bound by these Terms. Please read them carefully before using our services.
                             </p>
                         </motion.div>
 
@@ -112,11 +107,11 @@ const TermsOfService = () => {
                                     className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
                                 >
                                     <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                                            <IconComponent className="text-2xl text-amber-600" />
+                                        <div className="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                                            <IconComponent className="text-2xl text-yellow-600" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-amber-600 transition">
+                                            <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-yellow-600 transition">
                                                 {section.title}
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
@@ -129,15 +124,15 @@ const TermsOfService = () => {
                         })}
 
                         {/* Additional Terms */}
-                        <motion.div variants={fadeInUp} className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100">
+                        <motion.div variants={fadeInUp} className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-100">
                             <h3 className="text-xl font-bold mb-3 text-gray-800">Service Modifications</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">
-                                ByteFlow Ltd reserves the right to modify, suspend, or discontinue any part of our services at any time. We will notify users of significant changes through our website or via email.
+                                Code Explorer Rwanda Ltd reserves the right to modify, suspend, or discontinue any part of our services at any time. We will notify users of significant changes through our website or via email.
                             </p>
                             <div className="text-gray-600">
                                 <p className="font-medium text-gray-800">Contact Information:</p>
-                                <p>Email: byteflowltd9@gmail.com</p>
-                                <p>Phone: +250 796 023 452</p>
+                                <p>Email: codeexplorerrwanda@gmail.com</p>
+                                <p>Phone: +250 728 184 299</p>
                             </div>
                         </motion.div>
                     </motion.div>
@@ -152,7 +147,7 @@ const TermsOfService = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
+                        className="bg-gradient-to-r from-yellow-600 via-orange-600 to-yellow-700 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
                         
@@ -168,7 +163,7 @@ const TermsOfService = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 bg-white text-amber-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
+                                className="px-8 py-4 bg-white text-yellow-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                             >
                                 <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />
                                 Contact Legal Team

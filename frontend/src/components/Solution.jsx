@@ -62,7 +62,7 @@ const Solution = () => {
                 "Flyers & Brochures"
             ],
             tools: ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Canva Pro"],
-            color: "amber",
+            color: "yellow",
             orderLink: "#",
             deliveryTime: "5 Days"
         },
@@ -179,7 +179,7 @@ const Solution = () => {
     const getColorClasses = (color) => {
         const colorMap = {
             blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", gradient: "from-blue-500 to-blue-600", hover: "hover:bg-blue-50", light: "bg-blue-100" },
-            amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", gradient: "from-amber-500 to-amber-600", hover: "hover:bg-amber-50", light: "bg-amber-100" },
+            yellow: { bg: "bg-yellow-50", text: "text-yellow-600", border: "border-yellow-200", gradient: "from-yellow-500 to-yellow-600", hover: "hover:bg-yellow-50", light: "bg-yellow-100" },
             emerald: { bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", gradient: "from-emerald-500 to-emerald-600", hover: "hover:bg-emerald-50", light: "bg-emerald-100" },
             purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", gradient: "from-purple-500 to-purple-600", hover: "hover:bg-purple-50", light: "bg-purple-100" },
             rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200", gradient: "from-rose-500 to-rose-600", hover: "hover:bg-rose-50", light: "bg-rose-100" },
@@ -222,7 +222,7 @@ const Solution = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             Hit the service you need
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 and we'll build it
                             </span>
                         </h1>
@@ -269,7 +269,7 @@ const Solution = () => {
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Choose the service you need
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             Click any service to see full details, features, tools used, and pricing information.
                         </p>
@@ -613,7 +613,7 @@ const Solution = () => {
                                     Ready to Get Started?
                                 </h2>
                                 <p className="mt-3 text-lg text-blue-100 max-w-2xl leading-relaxed">
-                                    Talk with the ByteFlow team to choose the right service for your business and start building your online presence today.
+                                    Talk with the Code Explorer Rwanda team to choose the right service for your business and start building your online presence today.
                                 </p>
                             </div>
                             <motion.button

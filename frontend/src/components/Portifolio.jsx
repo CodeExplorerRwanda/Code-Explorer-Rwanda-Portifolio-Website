@@ -37,7 +37,7 @@ const Portfolio = () => {
             description: "A modern platform for Ecommerce shop help them to buy, sell goods and service, and community support.",
             tech: ["React", "Node.js", "MongoDB", "Javascript", "Express.js"],
             link: "#",
-            color: "amber"
+            color: "yellow"
         },
         {
             category: "E-commerce",
@@ -101,7 +101,7 @@ const Portfolio = () => {
             description: "A modern Ecommerce dashboard built with React and Vite, helping SAFI Linen company to manage, sell their products, track changes efficiently and customer buys their products in easy way.",
             tech: ["Next js", "Typescript", "Tailwind CSS", "Amazon dynamo DB"],
             link: "#",
-            color: "amber"
+            color: "yellow"
         },
         {
             category: "Decentralized Development",
@@ -157,7 +157,7 @@ const Portfolio = () => {
             title: "Nurturing the Elite Performers of Tomorrow",
             description: "Master Your Day, One Step at a Time. The ultimate solution for high-performance management.",
             icon: FaTrophy,
-            color: "amber"
+            color: "yellow"
         },
         {
             title: "Restoring Hope, Building Futures",
@@ -170,7 +170,7 @@ const Portfolio = () => {
     const getColorClasses = (color) => {
         const colorMap = {
             blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", gradient: "from-blue-500 to-blue-600" },
-            amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", gradient: "from-amber-500 to-amber-600" },
+            yellow: { bg: "bg-yellow-50", text: "text-yellow-600", border: "border-yellow-200", gradient: "from-yellow-500 to-yellow-600" },
             emerald: { bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", gradient: "from-emerald-500 to-emerald-600" },
             purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", gradient: "from-purple-500 to-purple-600" },
             rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200", gradient: "from-rose-500 to-rose-600" },
@@ -201,7 +201,7 @@ const Portfolio = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             Built Digital Platforms
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 for Business Growth
                             </span>
                         </h1>
@@ -296,7 +296,7 @@ const Portfolio = () => {
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Recent Projects From Our Studio
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             These cases highlight how we turn digital ideas into clear business value for Rwandan companies.
                         </p>
@@ -386,7 +386,7 @@ const Portfolio = () => {
                                     Ready to Build Your Digital Platform?
                                 </h2>
                                 <p className="mt-3 text-lg text-blue-100 max-w-2xl leading-relaxed">
-                                    Talk with the ByteFlow team to create a professional website, complete brand identity, or custom web application.
+                                    Talk with the Code Explorer team to create a professional website, complete brand identity, or custom web application.
                                 </p>
                             </div>
                             <motion.button

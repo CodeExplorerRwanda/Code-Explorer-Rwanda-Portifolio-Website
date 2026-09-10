@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Contact = () => {
-    // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -37,39 +36,35 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log('Form submitted:', formData);
     };
 
-    // Contact information from images
     const contactInfo = [
         {
             icon: FaMapMarkerAlt,
             title: "Visit Us",
-            detail: "Batisinda, Kigali, Rwanda",
+            detail: "Nyamata, Bugesera, Rwanda",
             color: "blue"
         },
         {
             icon: FaEnvelope,
             title: "Email Us",
-            detail: "byteflowltd9@gmail.com",
-            color: "amber"
+            detail: "codeexplorerrwanda@gmail.com",
+            color: "yellow"
         },
         {
             icon: FaPhone,
             title: "Call Us",
-            detail: "+250 796 023 452",
+            detail: "+250 728 184 299",
             color: "emerald"
         },
         {
             icon: FaClock,
             title: "Working Hours",
-            detail: "Mon - Sat: 8:00 AM - 9:00 PM",
+            detail: "Mon - Sun: 8:00 AM - 9:00 PM",
             color: "purple"
         }
     ];
 
-    // Features section
     const features = [
         {
             icon: FaGlobe,
@@ -81,7 +76,7 @@ const Contact = () => {
             icon: FaUsers,
             title: "Local Expertise",
             description: "Deep understanding of the Rwandan market and business environment.",
-            color: "amber"
+            color: "yellow"
         },
         {
             icon: FaShieldAlt,
@@ -94,7 +89,7 @@ const Contact = () => {
     const getColorClasses = (color) => {
         const colorMap = {
             blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", gradient: "from-blue-500 to-blue-600", hover: "hover:bg-blue-50", light: "bg-blue-100" },
-            amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", gradient: "from-amber-500 to-amber-600", hover: "hover:bg-amber-50", light: "bg-amber-100" },
+            yellow: { bg: "bg-yellow-50", text: "text-yellow-600", border: "border-yellow-200", gradient: "from-yellow-500 to-yellow-600", hover: "hover:bg-yellow-50", light: "bg-yellow-100" },
             emerald: { bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", gradient: "from-emerald-500 to-emerald-600", hover: "hover:bg-emerald-50", light: "bg-emerald-100" },
             purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", gradient: "from-purple-500 to-purple-600", hover: "hover:bg-purple-50", light: "bg-purple-100" }
         };
@@ -103,7 +98,6 @@ const Contact = () => {
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
-            {/* Hero Section */}
             <section className="relative min-h-[40vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -122,7 +116,7 @@ const Contact = () => {
                         
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             Let's Start a Project
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-400 to-emerald-400">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400">
                                 Together
                             </span>
                         </h1>
@@ -153,7 +147,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Contact Section */}
             <section className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -169,14 +162,13 @@ const Contact = () => {
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Let's Build Something Great Together
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-relaxed">
                             Fill out the form and our team will get back to you within 24 hours.
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                        {/* Contact Information */}
                         <motion.div 
                             variants={staggerContainer}
                             initial="hidden"
@@ -206,7 +198,6 @@ const Contact = () => {
                                 );
                             })}
 
-                            {/* WhatsApp Button */}
                             <motion.div
                                 variants={fadeInUp}
                                 className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -218,7 +209,6 @@ const Contact = () => {
                             </motion.div>
                         </motion.div>
 
-                        {/* Contact Form */}
                         <motion.div 
                             variants={staggerContainer}
                             initial="hidden"
@@ -311,7 +301,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
             <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
@@ -322,7 +311,7 @@ const Contact = () => {
                         className="text-center mb-12"
                     >
                         <span className="inline-block px-4 py-2 bg-purple-100 text-purple-600 font-bold rounded-full text-sm tracking-wider">
-                            WHY BYTEFLOW
+                            WHY Code Explorer
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
                             Global Standards, Local Expertise
@@ -365,7 +354,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Map Section (Placeholder) */}
             <section className="py-12 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
@@ -390,7 +378,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="py-20 px-4">
                 <div className="max-w-5xl mx-auto">
                     <motion.div 
@@ -431,15 +418,6 @@ const Contact = () => {
                             </div>
                         </div>
                     </motion.div>
-                </div>
-            </section>
-
-            {/* Footer Note */}
-            <section className="py-8 px-4">
-                <div className="max-w-7xl mx-auto text-center">
-                    <p className="text-gray-500 text-sm">
-                        © {new Date().getFullYear()} ByteFlow Ltd. All rights reserved. Engineering Digital Success.
-                    </p>
                 </div>
             </section>
         </div>
