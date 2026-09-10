@@ -184,10 +184,10 @@ const Home = () => {
             tier: "Cloud Hosting",
             icon: FaServer,
             color: "cyan",
-            price: "15,000",
+            price: "25,000",
             subtitle: "Secure online presence",
             features: [
-                { name: "Domain registration", price: "15,000 RWF / year" },
+                { name: "Domain registration", price: "25,000 RWF / year" },
                 { name: "Hosting package", price: "40,000 RWF / year" },
                 { name: "Business email", price: "25,000 RWF / year" },
                 { name: "Backup support", price: "20,000 RWF / year" }

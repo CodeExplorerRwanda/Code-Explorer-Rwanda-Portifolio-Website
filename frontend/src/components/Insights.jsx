@@ -10,9 +10,10 @@ import {
     FaChartBar, FaMailBulk, FaMoneyBillWave
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Insights = () => {
-    // Animation variants
+    const navigate = useNavigate();
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -26,7 +27,6 @@ const Insights = () => {
         }
     };
 
-    // Blog categories from images
     const categories = [
         { name: "Web Development", icon: FaCode, color: "blue" },
         { name: "SEO", icon: FaSearch, color: "amber" },
@@ -39,9 +39,7 @@ const Insights = () => {
         { name: "Development", icon: FaCode, color: "blue" }
     ];
 
-    // All blog posts from images
     const blogPosts = [
-        // Featured posts (first image)
         {
             category: "WEB DEVELOPMENT",
             title: "Why Your Business Needs a Website in 2026",
@@ -67,7 +65,6 @@ const Insights = () => {
             featured: true
         },
 
-        // Second image posts
         {
             category: "VIDEOGRAPHY",
             title: "4K Videography for High-Impact Social Ads",
@@ -117,7 +114,6 @@ const Insights = () => {
             featured: false
         },
 
-        // Third image posts
         {
             category: "SECURITY",
             title: "Cybersecurity Basics for Small Businesses",
@@ -167,7 +163,6 @@ const Insights = () => {
             featured: false
         },
 
-        // Fourth image posts
         {
             category: "DEVELOPMENT",
             title: "Mobile-First Design is No Longer Optional",
@@ -224,13 +219,11 @@ const Insights = () => {
         return colorMap[color] || colorMap.blue;
     };
 
-    // Get featured posts
     const featuredPosts = blogPosts.filter(post => post.featured);
     const regularPosts = blogPosts.filter(post => !post.featured);
 
     return (
         <div className="bg-gradient-to-b from-sky-50 via-white to-gray-50">
-            {/* Hero Section */}
             <section className="relative min-h-[50vh] flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')] bg-cover bg-center mix-blend-overlay"></div>
@@ -262,24 +255,16 @@ const Insights = () => {
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={() => navigate('/portfolio')}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                             >
                                 Explore Articles
-                            </motion.button>
-                            
-                            <motion.button 
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
-                            >
-                                Subscribe to Updates
                             </motion.button>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Category Tags */}
             <section className="py-8 px-4 bg-white shadow-sm">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-wrap items-center justify-center gap-3">
@@ -302,7 +287,6 @@ const Insights = () => {
                 </div>
             </section>
 
-            {/* Featured Posts */}
             <section className="py-16 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-7xl mx-auto">
                     <motion.div 
