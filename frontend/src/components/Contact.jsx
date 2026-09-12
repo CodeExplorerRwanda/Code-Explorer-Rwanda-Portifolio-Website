@@ -211,10 +211,10 @@ const Contact = () => {
                                 variants={fadeInUp}
                                 className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
                             >
-                                <button className="w-full flex items-center justify-center text-white font-bold text-lg">
+                                <a href="https://wa.me/+250728184299" target="_blank" ref="noopener noreferrer" className="w-full flex items-center justify-center text-white font-bold text-lg">
                                     <FaWhatsapp className="mr-3 text-2xl" />
                                     Chat on WhatsApp
-                                </button>
+                                </a>
                             </motion.div>
                         </motion.div>
 
