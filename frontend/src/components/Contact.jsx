@@ -8,10 +8,6 @@ import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
-
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -26,7 +22,6 @@ const Contact = () => {
     };
 
     const [formData, setFormData] = useState({
-        name: '',
         email: '',
         subject: '',
         message: ''
@@ -42,10 +37,10 @@ const Contact = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:4000/sendEmail', { formData });
-            alert(res.data.message);
+            const res = await axios.post('http://localhost:4000/sendEmail', formData);
+            alert(res?.data?.message || "Message sent successfully");
         } catch (err) {
-            alert(err.response.data.error || "Failed to send message")
+            alert(err.response?.data?.error || "Failed to send message")
         }
     };
 

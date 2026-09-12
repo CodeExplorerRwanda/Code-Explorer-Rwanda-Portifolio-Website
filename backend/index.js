@@ -1,11 +1,15 @@
 import nodemailer from "nodemailer";
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
 const route = express();
 route.use(express.json());
+route.use(cors({
+    origin: 'http://localhost:5173'
+}))
 
 const createEmailTransporter = () => {
     return nodemailer.createTransport({
@@ -19,6 +23,7 @@ const createEmailTransporter = () => {
 
 route.post('/sendEmail', async (req, res) => {
     const {email, subject, message } = req.body;
+    console.log(email, subject, message)
 
     const transporter = createEmailTransporter();
 
@@ -33,7 +38,7 @@ route.post('/sendEmail', async (req, res) => {
         await transporter.sendMail(mailOptions);
          return res.status(200).json({ message: 'Your message sent successfully!'});
     } catch (error) {
-       return res.status(200).json({ error: 'Your message sent successfully!'});
+       return res.status(500).json({ error: 'Your message sent successfully!'});
     }
 }
 );
