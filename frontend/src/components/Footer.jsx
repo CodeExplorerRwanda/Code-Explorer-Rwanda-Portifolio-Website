@@ -56,19 +56,19 @@ const Footer = () => {
                             Digital engineering and business growth for modern teams. We build websites, branding, and marketing that drive results.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"  className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
                                 <FaFacebook className="text-xl" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
+                            {/* <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
                                 <FaTwitter className="text-xl" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-pink-500 transition-colors duration-300 hover:scale-110 transform">
+                            </a> */}
+                            <a href="https://instgram.com/CodeExplorerRwanda" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors duration-300 hover:scale-110 transform">
                                 <FaInstagram className="text-xl" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-300 hover:scale-110 transform">
+                            {/* <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-300 hover:scale-110 transform">
                                 <FaLinkedin className="text-xl" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-300 hover:scale-110 transform">
+                            </a> */}
+                            <a href="https://youtube.com/@CodeExplorerRwanda" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors duration-300 hover:scale-110 transform">
                                 <FaYoutube className="text-xl" />
                             </a>
                         </div>
@@ -93,7 +93,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Services
                                 </Link>
@@ -120,31 +120,31 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3 pt-3">
                             <li>
-                                <Link to="/services#web-development" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution#web-development" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Web Development
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/services#graphic-design" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution#graphic-design" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Brand Design
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/services#digital-marketing" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution#digital-marketing" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Digital Marketing
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/services#web-hosting" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution#web-hosting" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Support & Maintenance
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/services#photography" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                                <Link to="/solution#photography" className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                                     Photography & Video
                                 </Link>

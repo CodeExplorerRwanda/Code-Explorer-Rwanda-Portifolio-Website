@@ -99,7 +99,7 @@ const Home = () => {
             tier: "AI based projects",
             icon: FaCode,
             color: "cyan",
-            price: "80,000",
+            price: "250,000",
             subtitle: "AI & Modern",
             features: [
                 { name: "ML-based project", price: "250,000 FRW" },
@@ -461,6 +461,7 @@ const Home = () => {
                         <motion.button 
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate('/contact')}
                             className="inline-flex bg-black text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg group whitespace-nowrap mt-4 md:mt-0"
                         >
                             Build a complete package 
