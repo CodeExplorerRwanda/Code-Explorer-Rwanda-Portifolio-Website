@@ -140,14 +140,17 @@ const Contact = () => {
                                 Get Started
                             </motion.button>
                             
-                            <motion.button 
+                            <motion.a 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                ref="noopener noreferrer"
+                                target="_blank"
+                                href="https://chat.whatsapp.com/CIzHWbPO3xP0gNE6y8Z9N6?s=cl&p=a&mlu=4&ilr=4"
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
                             >
                                 <FaWhatsapp className="mr-2 text-xl" />
-                                Chat on WhatsApp
-                            </motion.button>
+                                Join our WhatsApp Group
+                            </motion.a>
                         </div>
                     </motion.div>
                 </div>
