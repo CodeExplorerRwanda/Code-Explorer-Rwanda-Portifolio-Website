@@ -233,22 +233,6 @@ const Contact = () => {
                             >
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
-                                            Full Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            placeholder="John Doe"
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
-                                            required
-                                        />
-                                    </div>
-
-                                    <div>
                                         <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
                                             Email Address
                                         </label>
