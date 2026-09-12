@@ -33,7 +33,7 @@ route.post('/sendEmail', async (req, res) => {
         await transporter.sendMail(mailOptions);
          return res.status(200).json({ message: 'Your message sent successfully!'});
     } catch (error) {
-       return res.status(200).json({ message: 'Your message sent successfully!'});
+       return res.status(200).json({ error: 'Your message sent successfully!'});
     }
 }
 );

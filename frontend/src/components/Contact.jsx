@@ -5,13 +5,13 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
-    
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -39,8 +39,14 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
+        try {
+            const res = await axios.post('http://localhost:4000/sendEmail', { formData });
+            alert(res.data.message);
+        } catch (err) {
+            alert(err.response.data.error || "Failed to send message")
+        }
     };
 
     const contactInfo = [
