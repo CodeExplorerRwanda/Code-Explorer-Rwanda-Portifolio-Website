@@ -143,7 +143,7 @@ const Contact = () => {
                             <motion.a 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                ref="noopener noreferrer"
+                                rel="noopener noreferrer"
                                 target="_blank"
                                 href="https://chat.whatsapp.com/CIzHWbPO3xP0gNE6y8Z9N6?s=cl&p=a&mlu=4&ilr=4"
                                 className="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
@@ -211,7 +211,7 @@ const Contact = () => {
                                 variants={fadeInUp}
                                 className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
                             >
-                                <a href="https://wa.me/+250728184299" target="_blank" ref="noopener noreferrer" className="w-full flex items-center justify-center text-white font-bold text-lg">
+                                <a href="https://wa.me/+250728184299" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center text-white font-bold text-lg">
                                     <FaWhatsapp className="mr-3 text-2xl" />
                                     Chat on WhatsApp
                                 </a>
@@ -400,14 +400,15 @@ const Contact = () => {
                                     <FaEnvelope className="mr-2 group-hover:scale-110 transition duration-300" />
                                     Contact Us
                                 </motion.button>
-                                <motion.button
+                              <motion.a
+                                    href="https://wa.me/+250728184299" target="_blank" rel="noopener noreferrer" 
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center whitespace-nowrap group"
                                 >
                                     <FaWhatsapp className="mr-2 text-xl group-hover:scale-110 transition duration-300" />
                                     WhatsApp
-                                </motion.button>
+                                </motion.a>
                             </div>
                         </div>
                     </motion.div>
