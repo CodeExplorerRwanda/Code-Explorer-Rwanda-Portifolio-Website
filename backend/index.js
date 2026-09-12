@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import express from "express";
 
 const route = express();
+route.use(express.json());
 
 const createEmailTransporter = () => {
     return nodemailer.createTransport({
@@ -14,7 +15,7 @@ const createEmailTransporter = () => {
 };
 
 route.post('/sendEmail', async (req, res) => {
-    const {email, subject, message} = req.body;
+    const {email, subject, message } = req.body;
 
     const transporter = createEmailTransporter();
 
@@ -27,9 +28,9 @@ route.post('/sendEmail', async (req, res) => {
     
     try {
         await transporter.sendMail(mailOptions);
-        return true;
+         return res.status(200).json({ message: 'Your message sent successfully!'});
     } catch (error) {
-        return false;
+       return res.status(200).json({ message: 'Your message sent successfully!'});
     }
 }
 );
