@@ -20,6 +20,14 @@ const Insights = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
 
+    const [email, setEmail] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (email.trim() !== "") {
+            alert("Thank you for your subscribing!");
+        }
+    }
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -975,7 +983,7 @@ const Insights = () => {
             </section>
 
             <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
-                <div className="max-w-4xl mx-auto">
+                <form className="max-w-4xl mx-auto" onSubmit={handleSubmit}>
                     <motion.div 
                         initial="hidden"
                         whileInView="visible"
@@ -994,12 +1002,12 @@ const Insights = () => {
                             <input 
                                 type="email" 
                                 placeholder="Enter your email address"
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                                 className="flex-1 px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 transition"
                             />
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
-                                onClick={() => alert("Subscribed successfully")}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
                             >
@@ -1007,7 +1015,7 @@ const Insights = () => {
                             </motion.button>
                         </div>
                     </motion.div>
-                </div>
+                </form>
             </section>
 
             <section className="py-20 px-4">
