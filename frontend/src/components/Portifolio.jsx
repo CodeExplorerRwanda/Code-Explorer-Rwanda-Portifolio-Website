@@ -52,7 +52,7 @@ const Portfolio = () => {
             title: "Net Moviess",
             description: "A movie management platform for NET featuring full movie watching with better performance and accessibility.",
             tech: ["Framer", "MongoDB", "React", "Express.js", "Node.js", "Tailwind CSS"],
-            link: "#",
+            link: "https://netmoviess.vercel.app",
             color: "purple"
         },
         {
@@ -68,7 +68,7 @@ const Portfolio = () => {
             title: "House Price Prediction app",
             description: "A modern and free digital agency website engineered for Predicting house price in real time.",
             tech: ["React", "Python & Flask", "Jupyter notebook", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
-            link: "#",
+            link: "https://predictor-pearl.vercel.app",
             color: "indigo"
         },
         {
