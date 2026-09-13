@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import express, { Router } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -13,7 +13,9 @@ route.use(cors({
 
 const createEmailTransporter = () => {
     return nodemailer.createTransport({
-        service: 'gmail',
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.APP_PASS
