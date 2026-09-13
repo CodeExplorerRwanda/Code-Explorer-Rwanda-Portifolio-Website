@@ -8,7 +8,7 @@ dotenv.config();
 const route = express();
 route.use(express.json());
 route.use(cors({
-    origin: process.env.BACKEND_API
+    origin: process.env.FRONTEND_API
 }))
 
 const createEmailTransporter = () => {
