@@ -233,40 +233,119 @@ const About = () => {
 
             <section className="py-20 px-4 bg-gradient-to-b from-white to-sky-50">
                 <div className="max-w-5xl mx-auto">
-                    <motion.div 
+                    <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100"
+                        className="relative overflow-hidden bg-white rounded-3xl p-8 md:p-12 shadow-2xl shadow-blue-100/50 border border-gray-100"
                     >
-                        <div className="flex items-center mb-6">
-                            <FaCrown className="text-yellow-500 text-3xl mr-4" />
-                            <span className="text-sm font-bold text-yellow-500 tracking-wider">LEADERSHIP & STRATEGY</span>
-                        </div>
-                        
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">Meet the Leadership Team</h2>
-                        
-                        <div className="flex items-start space-x-6 mb-6">
-                            <div className="w-20 h-20 rounded-full bg-gradient-to-r flex items-center justify-center font-bold flex-shrink-0">
-                                <img src={Founder} className="object-cover w-full h-full rounded-full"/>
+                        <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl" />
+                        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-yellow-100/40 rounded-full blur-3xl" />
+
+                        <div className="relative z-10">
+
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 shadow-lg shadow-yellow-200">
+                                    <FaCrown className="text-white text-2xl" />
+                                </div>
+
+                                <div>
+                                    <span className="text-xs md:text-sm font-bold text-yellow-600 tracking-[0.2em]">
+                                        LEADERSHIP & STRATEGY
+                                    </span>
+
+                                    <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mt-2" />
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-gray-800">{leadership.name}</h3>
-                                <p className="text-blue-600 font-medium">{leadership.title}</p>
+
+                            {/* Title */}
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
+                                Meet the Leadership Team
+                            </h2>
+
+                            {/* Founder profile */}
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
+
+                                {/* Founder image */}
+                                <div className="relative flex-shrink-0">
+
+                                    {/* Outer ring */}
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-400 blur-[2px] scale-110" />
+
+                                    <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-white shadow-xl">
+                                        <img
+                                            src={Founder}
+                                            alt={leadership.name}
+                                            className="w-full h-full object-cover rounded-full"
+                                        />
+                                    </div>
+
+                                    {/* Crown badge */}
+                                    <div className="absolute -bottom-1 -right-1 w-9 h-9 flex items-center justify-center bg-yellow-400 rounded-full border-4 border-white shadow-md">
+                                        <FaCrown className="text-white text-sm" />
+                                    </div>
+                                </div>
+
+                                {/* Founder information */}
+                                <div className="text-center sm:text-left pt-2">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                                        {leadership.name}
+                                    </h3>
+
+                                    <p className="text-blue-600 font-semibold text-lg mt-1">
+                                        {leadership.title}
+                                    </p>
+
+                                    <div className="flex items-center justify-center sm:justify-start gap-2 mt-3">
+                                        <span className="w-2 h-2 rounded-full bg-green-500" />
+                                        <span className="text-sm text-gray-500">
+                                            Founder & Visionary Leader
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            {leadership.description}
-                        </p>
-                        
-                        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                            <p className="text-gray-700 leading-relaxed">
-                                <span className="font-bold text-blue-600">The Founding Philosophy:</span> {leadership.philosophy}
+
+                            {/* Description */}
+                            <p className="text-gray-600 text-base md:text-lg leading-8 mb-8">
+                                {leadership.description}
                             </p>
+
+                            {/* Philosophy */}
+                            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-7 rounded-2xl border border-blue-100 mb-8">
+                                <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-r-full" />
+
+                                <p className="text-gray-700 leading-8 pl-4">
+                                    <span className="font-bold text-blue-700">
+                                        The Founding Philosophy:
+                                    </span>{" "}
+                                    {leadership.philosophy}
+                                </p>
+                            </div>
+
+                            {/* Portfolio button */}
+                            <div className="flex flex-col sm:flex-row items-center gap-4">
+
+                                <a
+                                    href="/portfolio"
+                                    className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-1 transition-all duration-300"
+                                >
+                                    Visit Portfolio
+
+                                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                        →
+                                    </span>
+                                </a>
+
+                                <span className="text-sm text-gray-500">
+                                    Explore our work & achievements
+                                </span>
+
+                            </div>
+
                         </div>
                     </motion.div>
+
                 </div>
             </section>
 
