@@ -31,10 +31,11 @@ route.post('/sendEmail', async (req, res) => {
     const transporter = createEmailTransporter();
 
     const mailOptions = {
-        from: `${email}`,
-        to: process.env.EMAIL_USER,
-        subject: subject,
-        text: message
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
+            replyTo: email,
+            subject: subject,
+            text: message
     };
     
     try {
