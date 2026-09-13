@@ -259,18 +259,14 @@ const About = () => {
                                 </div>
                             </div>
 
-                            {/* Title */}
                             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
                                 Meet the Leadership Team
                             </h2>
 
-                            {/* Founder profile */}
                             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
 
-                                {/* Founder image */}
                                 <div className="relative flex-shrink-0">
 
-                                    {/* Outer ring */}
                                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-400 blur-[2px] scale-110" />
 
                                     <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-white shadow-xl">
@@ -281,13 +277,11 @@ const About = () => {
                                         />
                                     </div>
 
-                                    {/* Crown badge */}
                                     <div className="absolute -bottom-1 -right-1 w-9 h-9 flex items-center justify-center bg-yellow-400 rounded-full border-4 border-white shadow-md">
                                         <FaCrown className="text-white text-sm" />
                                     </div>
                                 </div>
 
-                                {/* Founder information */}
                                 <div className="text-center sm:text-left pt-2">
                                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                                         {leadership.name}
@@ -306,12 +300,10 @@ const About = () => {
                                 </div>
                             </div>
 
-                            {/* Description */}
                             <p className="text-gray-600 text-base md:text-lg leading-8 mb-8">
                                 {leadership.description}
                             </p>
 
-                            {/* Philosophy */}
                             <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-7 rounded-2xl border border-blue-100 mb-8">
                                 <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-r-full" />
 
@@ -323,11 +315,12 @@ const About = () => {
                                 </p>
                             </div>
 
-                            {/* Portfolio button */}
-                            <div className="flex flex-col sm:flex-row items-center gap-4">
+                             <div className="flex flex-col sm:flex-row items-center gap-4">
 
                                 <a
-                                    href="/portfolio"
+                                    href="https://niyomugaboetiene.vercel.app"
+                                    rel="noopener noreferer"
+                                    target="_blank"
                                     className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-1 transition-all duration-300"
                                 >
                                     Visit Portfolio
