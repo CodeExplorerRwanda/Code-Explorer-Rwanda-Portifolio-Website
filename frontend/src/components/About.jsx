@@ -267,7 +267,6 @@ const About = () => {
 
                                 <div className="relative flex-shrink-0">
 
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-400 blur-[2px] scale-110" />
 
                                     <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-white shadow-xl">
                                         <img
@@ -275,10 +274,6 @@ const About = () => {
                                             alt={leadership.name}
                                             className="w-full h-full object-cover rounded-full"
                                         />
-                                    </div>
-
-                                    <div className="absolute -bottom-1 -right-1 w-9 h-9 flex items-center justify-center bg-yellow-400 rounded-full border-4 border-white shadow-md">
-                                        <FaCrown className="text-white text-sm" />
                                     </div>
                                 </div>
 
