@@ -3,12 +3,13 @@ import {
     FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube,
     FaGlobe, FaRocket
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Footer = () => {
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
     
         const handleSubmit = (e) => {
             e.preventDefault();
