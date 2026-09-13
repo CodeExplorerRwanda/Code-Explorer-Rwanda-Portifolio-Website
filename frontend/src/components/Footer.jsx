@@ -1,7 +1,8 @@
 import { 
     FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, 
     FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube,
-    FaGlobe, FaRocket
+    FaGlobe, FaRocket,
+    FaTiktok
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -59,8 +60,11 @@ const Footer = () => {
                             Digital engineering and business growth for modern teams. We build websites, branding, and marketing that drive results.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"  className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
+                            <a href="https://web.facebook.com/profile.php?id=61594348134949" target="_blank" rel="noopener noreferrer"  className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
                                 <FaFacebook className="text-xl" />
+                            </a>
+                            <a href="https://www.tiktok.com/@codeexplorerrwanda" target="_blank" rel="noopener noreferrer"  className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
+                                <FaTiktok className="text-xl" />
                             </a>
                             {/* <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
                                 <FaTwitter className="text-xl" />
