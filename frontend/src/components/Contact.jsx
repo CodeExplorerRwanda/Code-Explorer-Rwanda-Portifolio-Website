@@ -8,6 +8,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
+    const BACKEND_API = import.meta.env.VITE_BACKEND_API;
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
@@ -37,7 +38,7 @@ const Contact = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:4000/sendEmail', formData);
+            const res = await axios.post(`${BACKEND_API}/sendEmail`, formData);
             alert(res?.data?.message || "Message sent successfully");
         } catch (err) {
             alert(err.response?.data?.error || "Failed to send message")
