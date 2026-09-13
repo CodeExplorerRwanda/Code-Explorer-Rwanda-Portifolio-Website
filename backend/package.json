@@ -5,8 +5,8 @@
   "description": "Backend API for Code Explorer Rwanda Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
