@@ -9,11 +9,13 @@ import { useState } from "react";
 
 const Footer = () => {
     const [email, setEmail] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setEmail('');
-    };
+    
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            if (email.trim() !== "") {
+                alert("Thank you for your subscribing!");
+            }
+        }
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
@@ -198,6 +200,7 @@ const Footer = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate('/contact')}
                             className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-green-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
                         >
                             <FaRocket className="mr-2" />
