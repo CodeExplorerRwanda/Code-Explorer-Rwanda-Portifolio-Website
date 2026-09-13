@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import express from "express";
+import express, { Router } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -21,6 +21,9 @@ const createEmailTransporter = () => {
     });
 };
 
+route.get('/', async(req, res) => {
+    return res.status(200).json({ message: 'Welcome to code explorer rwanda backend'})
+})
 route.post('/sendEmail', async (req, res) => {
     const {email, subject, message } = req.body;
     console.log(email, subject, message)
