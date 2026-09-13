@@ -352,14 +352,17 @@ const Portfolio = () => {
                                                 <FaArrowRight className="ml-1 group-hover:translate-x-1 transition" />
                                             </motion.button>
                                             
-                                            <motion.button
+                                            <motion.a
+                                                href={project.link}
+                                                rel="noopener noreferrer"
+                                                target="_blank"
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                                 className={`px-4 py-2 ${colors.bg} ${colors.text} rounded-full text-sm font-bold hover:shadow-md transition-all duration-300 flex items-center`}
                                             >
                                                 Launch App 
                                                 <FaRocket className="ml-1 text-xs" />
-                                            </motion.button>
+                                            </motion.a>
                                         </div>
                                     </div>
                                 </motion.div>

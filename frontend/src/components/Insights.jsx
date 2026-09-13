@@ -994,10 +994,12 @@ const Insights = () => {
                             <input 
                                 type="email" 
                                 placeholder="Enter your email address"
+                                required
                                 className="flex-1 px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 transition"
                             />
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
+                                onClick={() => alert("Subscribed successfully")}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
                             >
