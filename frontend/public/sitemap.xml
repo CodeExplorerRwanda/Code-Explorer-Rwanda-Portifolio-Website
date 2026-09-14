@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/about</loc>
+  </url>
+
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/Portfolio</loc>
+  </url>
+
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/contact</loc>
+  </url>
+  
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/solution</loc>
+  </url>
+  
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/insights</loc>
+  </url>
+  
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/privancy</loc>
+  </url>
+  <url>
+    <loc>https://codeexplorerrwanda.netlify.app/terms</loc>
+  </url>
+
+</urlset>
