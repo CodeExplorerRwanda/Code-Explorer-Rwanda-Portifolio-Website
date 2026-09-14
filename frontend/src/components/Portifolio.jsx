@@ -36,7 +36,7 @@ const Portfolio = () => {
             title: "Shop Sphere",
             description: "A modern platform for Ecommerce shop help them to buy, sell goods and service, and community support.",
             tech: ["React", "Node.js", "MongoDB", "Javascript", "Express.js"],
-            link: "#",
+            link: "",
             color: "yellow"
         },
         {
@@ -44,7 +44,7 @@ const Portfolio = () => {
             title: "HomeFinder app",
             description: "A premium home e-commerce platform delivering better home for lent and sell with seamless checkout.",
             tech: ["React", "Node.js", "MongoDB", "Javascript", "Express.js"],
-            link: "#",
+            link: "",
             color: "emerald"
         },
         {
@@ -60,7 +60,7 @@ const Portfolio = () => {
             title: "Face recognation app",
             description: "A modern digital AI platform that recognize images and provide the details of the images in real-time.",
             tech: ["React", "Python & Flask", "Jupyter notebook", "MongoDB & Mongoose", "JWT", "Cloudinary", "Multer"],
-            link: "#",
+            link: "",
             color: "rose"
         },
         {
@@ -76,7 +76,7 @@ const Portfolio = () => {
             title: "Rwanda Creditit Denial Predictor",
             description: "The RCDP is web platform serves predict if Rwandan house hold will get the goverment crediti or not based on their features.",
             tech: ["React", "Python & Flask", "Jupyter notebook", "MySQL & mysql2", "JWT", "Cloudinary", "Multer"],
-            link: "#",
+            link: "",
             color: "cyan"
         },
         {
@@ -84,7 +84,7 @@ const Portfolio = () => {
             title: "Task Remainder",
             description: "A modern, mobile digital governance system for you that will remind you the task you have to do.",
             tech: ["React-native", "Node.js", "MongoDB", "Express.js"],
-            link: "#",
+            link: "",
             color: "teal"
         },
         {
@@ -92,7 +92,7 @@ const Portfolio = () => {
             title: "SAF Ltd",
             description: "A modern Ecommerce dashboard built with React and Vite, helping SAF company to manage, sell their animals, track changes efficiently and customer buys animals in easy way.",
             tech: ["TypeScript", "Node.js", "React", "Vite"],
-            link: "#",
+            link: "",
             color: "blue"
         },
         {
@@ -100,7 +100,7 @@ const Portfolio = () => {
             title: "SAFI Linen ltd",
             description: "A modern Ecommerce dashboard built with React and Vite, helping SAFI Linen company to manage, sell their products, track changes efficiently and customer buys their products in easy way.",
             tech: ["Next js", "Typescript", "Tailwind CSS", "Amazon dynamo DB"],
-            link: "#",
+            link: "",
             color: "yellow"
         },
         {
@@ -108,7 +108,7 @@ const Portfolio = () => {
             title: "Krypto Site",
             description: "A modern Decentralized web app for sending and receiving crypto (ex: ETH, BTC).",
             tech: ["TypeScript", "Ethers.js", "Solidity", "tailwindcss", "Web3.js"],
-            link: "#",
+            link: "",
             color: "emerald"
         },
         {
@@ -116,7 +116,7 @@ const Portfolio = () => {
             title: "GTSS Chat",
             description: "A modern chat app designed for communicating the Gikonko tss leaders and the parents and sharing message between them.",
             tech: ["React", "Node.js & Express", "MongoDB & Mongoose", "tailwindcss", "socket.io"],
-            link: "#",
+            link: "",
             color: "purple"
         },
         {
@@ -124,7 +124,7 @@ const Portfolio = () => {
             title: "GTTI COMPANY Ltd",
             description: "GTTI is a professional, high-density company suite designed for modern Rwandan selling platform.",
             tech: ["React", "MySQL", "Node.js", "tailwindcss"],
-            link: "#",
+            link: "",
             color: "rose"
         },
         {
@@ -132,7 +132,7 @@ const Portfolio = () => {
             title: "SHIRINYOTA Company Ltd",
             description: "A modern project management dashboard built with React and modern web technologies that help SHIRINYOTA Company to sell their drinking products.",
             tech: ["React", "Vanilla CSS", "Node.js", "MongoDB"],
-            link: "#",
+            link: "",
             color: "indigo"
         },
         {
@@ -140,7 +140,7 @@ const Portfolio = () => {
             title: "Ecole Primaire Sainte Anne",
             description: "Say goodbye to manual entry. Join thousands of schools experts using our best tools, templates, and insights.",
             tech: ["TypeScript", "Node.js", "React", "MySQL"],
-            link: "#",
+            link: "",
             color: "teal"
         }
     ];
