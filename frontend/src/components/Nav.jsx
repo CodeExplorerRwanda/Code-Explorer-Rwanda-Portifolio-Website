@@ -105,11 +105,11 @@ const Nav = () => {
                         <FaHome className="me-3 text-lg" />
                         <span className="font-medium">Home</span>
                     </Link>
-                    <Link to="/services" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
+                    <Link to="/solution" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
                         <FaServicestack className="me-3 text-lg" />
                         <span className="font-medium">Solutions</span>
                     </Link>
-                    <Link to="/portfolio" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
+                    <Link to="/Portfolio" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
                         <FaBriefcase className="me-3 text-lg" />
                         <span className="font-medium">Portfolio</span>
                     </Link>
@@ -117,7 +117,7 @@ const Nav = () => {
                         <FaInfoCircle className="me-3 text-lg" />
                         <span className="font-medium">About</span>
                     </Link>
-                    <Link to="/blog" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
+                    <Link to="/insights" className="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200">
                         <FaNewspaper className="me-3 text-lg" />
                         <span className="font-medium">Insights</span>
                     </Link>
@@ -125,7 +125,7 @@ const Nav = () => {
                         <FaEnvelope className="me-3 text-lg" />
                         <span className="font-medium">Connect</span>
                     </Link>
-                    <Link to="/get-started" className="flex items-center justify-center px-4 py-3 mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link to="/contact" className="flex items-center justify-center px-4 py-3 mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <FaRocket className="me-2" />
                         <span className="font-bold">Launch Project</span>
                     </Link>
